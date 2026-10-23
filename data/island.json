@@ -1,0 +1,347 @@
+{
+  "schemaVersion": "2.0",
+  "meta": {
+    "slug": "uni-island",
+    "title": { "zh": "統一金融島", "en": "Uni Finance Island" },
+    "eyebrow": "UNI ISLAND.",
+    "projectTag": "FINANCE",
+    "projectName": { "zh": "金融服務地圖", "en": "A Map of Financial Services" },
+    "heroTitle": { "zh": "一格一項服務<br>一座相連的金融城", "en": "One hex, one service.<br>One connected financial town." },
+    "heroSub": { "zh": "跟著一位投資人走一遍，<br>看見每項服務之間的關係。", "en": "Walk the island with one investor<br>and see how the services connect." },
+    "loadingText": { "zh": "正在搭建金融島…", "en": "Building the island…" },
+    "unofficial": { "zh": "非官方個人作品・不構成投資建議", "en": "Unofficial personal project · Not investment advice" },
+    "themeColor": "#E8601C",
+    "checkedAt": "2026-10-23",
+    "disclaimer": {
+      "zh": "本網站為個人製作的非官方介紹性互動地圖，與統一綜合證券及其關係企業無任何隸屬或授權關係，內容整理自其官方網站公開資訊，僅供認識公司與服務之用，不構成任何投資建議或商品推介。信用交易、期貨、權證、ETN 等商品具槓桿或複雜結構，可能產生超過原始投入的損失。商品條件、費率與最新公告請以官網為準。資料查核日期：2026-10-23。島上的 3D 場景為示意插畫。",
+      "en": "This is an unofficial, personal, explanatory map. It is not affiliated with or endorsed by President Securities Corporation or its affiliates. Content is compiled from the company's public website for general information only and is not investment advice or a product solicitation. Margin trading, futures, warrants and ETNs involve leverage or complex structures and may cause losses exceeding your initial outlay. Always refer to the official website for terms, fees and announcements. Content checked 2026-10-23. 3D scenes are illustrative."
+    }
+  },
+
+  "sources": [
+    { "id": "history", "title": "創建沿革", "url": "https://www.pscnet.com.tw/pscnetAbout/menuMain.do?main_id=38c7658a5d000000df2594a290c9bdc1&sub_id=39443690bf000000abf13fa9508ea44d" },
+    { "id": "rating", "title": "信評資料", "url": "https://www.pscnet.com.tw/pscnetAbout/menuMain.do?main_id=38c76ef7c2000000a0e7875e2ae4b28a&sub_id=38c76f4cd000000000ab6f6efa9ead2a" },
+    { "id": "branches", "title": "營業據點", "url": "https://www.pscnet.com.tw/pscnetAbout/menuMain.do?main_id=38c7668e6b000000275f998172aeafe5&sub_id=3939b43d100000000a3a3a4ea0c0dd7d" },
+    { "id": "about", "title": "關於統一證券・榮耀與肯定", "url": "https://www.pscnet.com.tw/pscnetAbout/about.do" },
+    { "id": "csr", "title": "企業永續發展專區", "url": "https://www.pscnet.com.tw/pscnetAbout/csrArea.do" },
+    { "id": "stock", "title": "統一證券首頁（證券）", "url": "https://www.pscnet.com.tw/pscnetStock/index.do" },
+    { "id": "platforms", "title": "平台比較", "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce433b000000f7bbe088ac19ce76&sub_id=38a8a11bca000000ec85014e1b4e296e" },
+    { "id": "qingpu", "title": "【分公司開始營業公告】青埔簡易分公司（2026/09/08）", "url": "https://www.pscnet.com.tw/pscnetStock/index.do" }
+  ],
+
+  "categories": [
+    { "id": "T", "name": { "zh": "交易下單", "en": "Trading" }, "color": "#E8601C" },
+    { "id": "P", "name": { "zh": "投資商品", "en": "Products" }, "color": "#2E6FB7" },
+    { "id": "W", "name": { "zh": "財富管理", "en": "Wealth" }, "color": "#C9A227" },
+    { "id": "S", "name": { "zh": "專業服務", "en": "Services" }, "color": "#5B8C5A" },
+    { "id": "C", "name": { "zh": "公司與永續", "en": "Company & ESG" }, "color": "#7A5C9E" }
+  ],
+
+  "islands": [
+    {
+      "id": "harbour", "no": "01", "category": "C", "hex": [-1, 0], "model": "pier",
+      "name": { "zh": "創始碼頭", "en": "Founding Pier" },
+      "tagline": { "zh": "1988 年，一群企業一起出航", "en": "1988: a group of companies set sail together" },
+      "body": {
+        "zh": "1988 年由統一企業結合統一超商、長興化工、誠品實業、台南紡織等企業共同創立「統一證券」。1989 年 3 月更名為「統一綜合證券」，同年 4 月 3 日正式進入證券市場。",
+        "en": "Founded in 1988 by Uni-President Enterprises together with President Chain Store, Eternal Chemical, Eslite and Tainan Spinning. Renamed President Securities in March 1989, it entered the market on 3 April 1989."
+      },
+      "sources": ["history"],
+      "items": [
+        { "name": { "zh": "1988 創立", "en": "Founded 1988" }, "desc": { "zh": "由統一企業發起，多家企業共同創立", "en": "Initiated by Uni-President with several partner companies" } },
+        { "name": { "zh": "1989/04/03 正式營業", "en": "Opened 1989-04-03" }, "desc": { "zh": "同年 3 月更名為統一綜合證券", "en": "Renamed President Securities that March" } },
+        { "name": { "zh": "股票代號 2855", "en": "Ticker 2855" }, "desc": { "zh": "台灣證券交易所上市", "en": "Listed on TWSE" } }
+      ],
+      "scene": "木造碼頭上停著一艘掛著橘色旗幟的帆船，岸邊幾間倉庫，碼頭工人搬運貨箱。",
+      "url": "https://www.pscnet.com.tw/pscnetAbout/about.do"
+    },
+    {
+      "id": "bridge", "no": "02", "category": "C", "hex": [-1, -1], "model": "bridge",
+      "name": { "zh": "合併大橋", "en": "Merger Bridge" },
+      "tagline": { "zh": "九座小島，一次連成一座城", "en": "Nine islets joined in one go" },
+      "body": {
+        "zh": "1991 年 9 月一舉合併九家專業經紀商，是當時國內合併家數最多的證券商合併案，也開啟了證券市場的購併風潮。之後歷經多次新設與併購，目前全台有總公司與 31 家分公司，2026 年 9 月 16 日青埔簡易分公司開業。想臨櫃辦理的投資人，可以走進最近的據點。",
+        "en": "In September 1991 the firm merged nine brokerages at once, the largest such merger in Taiwan at the time, sparking a wave of consolidation. Today there is a head office plus 31 branches across Taiwan; the Qingpu branch opened on 16 September 2026. Investors who prefer a counter can walk into the nearest one."
+      },
+      "sources": ["history", "branches", "qingpu"],
+      "items": [
+        { "name": { "zh": "1991/09 合併九家經紀商", "en": "1991-09: nine brokers merged" }, "desc": { "zh": "當時合併家數為歷來最多", "en": "The most firms in one merger at the time" } },
+        { "name": { "zh": "總公司＋31 家分公司", "en": "Head office + 31 branches" }, "desc": { "zh": "另有 4 處期貨據點", "en": "Plus 4 futures counters" }, "url": "https://www.pscnet.com.tw/pscnetAbout/menuMain.do?main_id=38c7668e6b000000275f998172aeafe5&sub_id=3939b43d100000000a3a3a4ea0c0dd7d" },
+        { "name": { "zh": "青埔簡易分公司", "en": "Qingpu branch" }, "desc": { "zh": "2026/09/16 開業", "en": "Opened 2026-09-16" } }
+      ],
+      "scene": "一座拱橋連接九個小平台，每個平台上有一間小分行，人潮從各平台匯流過橋。",
+      "url": "https://www.pscnet.com.tw/pscnetAbout/menuMain.do?main_id=38c7668e6b000000275f998172aeafe5&sub_id=3939b43d100000000a3a3a4ea0c0dd7d"
+    },
+    {
+      "id": "port", "no": "03", "category": "T", "hex": [0, 0], "model": "port",
+      "name": { "zh": "證券港", "en": "Brokerage Port" },
+      "tagline": { "zh": "台股交易的主要航道", "en": "The main channel for Taiwan stocks" },
+      "body": {
+        "zh": "台股經紀業務是島的心臟。依習慣可以選擇不同的下單管道：電腦軟體金贏島、金好探，網頁版 e統金，行動 App e起發、e指發，另有 405 語音下單與給程式交易者的統一 API。",
+        "en": "Brokerage is the island's heart. Investors choose a channel that suits them: desktop apps (金贏島, 金好探), web (e統金), mobile apps (e起發, e指發), 405 phone ordering, and the 統一 API for programmatic trading."
+      },
+      "sources": ["stock", "platforms"],
+      "items": [
+        { "name": { "zh": "金贏島", "en": "金贏島" }, "desc": { "zh": "電腦軟體，可交易證期權、興櫃與港美陸股，重視報價與下單速度", "en": "Desktop app for stocks, futures, options, emerging stocks and HK/US/China shares; built for fast quotes and orders" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce433b000000f7bbe088ac19ce76&sub_id=38a8a11bca000000ec85014e1b4e296e" },
+        { "name": { "zh": "金好探", "en": "金好探" }, "desc": { "zh": "電腦軟體，介面直覺好上手", "en": "Desktop app with a simple interface" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce433b000000f7bbe088ac19ce76&sub_id=38a8a157cf0000005f020a6cb00fa7a8" },
+        { "name": { "zh": "e統金", "en": "e統金" }, "desc": { "zh": "網頁版下單，新手老手都適用", "en": "Web-based trading for beginners and veterans" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce433b000000f7bbe088ac19ce76&sub_id=38a8a19807000000045aea92c4f0d94a" },
+        { "name": { "zh": "e起發", "en": "e起發" }, "desc": { "zh": "行動 App，交易證券與興櫃", "en": "Mobile app for stocks and emerging stocks" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce433b000000f7bbe088ac19ce76&sub_id=658f6daac6000000091eb71cbbd27530" },
+        { "name": { "zh": "e指發", "en": "e指發" }, "desc": { "zh": "行動 App，商品最廣：證期權、海外股票、海期、基金、海外債", "en": "Mobile app with the widest range: stocks, derivatives, overseas shares and futures, funds, foreign bonds" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce433b000000f7bbe088ac19ce76&sub_id=38a8a1cfd3000000355a4917c3e71001" },
+        { "name": { "zh": "405 語音下單", "en": "405 phone ordering" }, "desc": { "zh": "電話下單，網路不便時的替代管道", "en": "Order by phone when online isn't an option" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce433b000000f7bbe088ac19ce76&sub_id=38a8a208bf00000069468f7cab307dea" },
+        { "name": { "zh": "統一 API", "en": "統一 API" }, "desc": { "zh": "給具程式開發能力的使用者，需申請並完成測試", "en": "For developers; requires application and testing" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce433b000000f7bbe088ac19ce76&sub_id=38a8a25e550000000dc48c0c223267c3" },
+        { "name": { "zh": "服務與收費", "en": "Services & fees" }, "desc": { "zh": "手續費與各項收費說明", "en": "Commission and fee schedule" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39342394e6000000fb68431aa84ec03d" }
+      ],
+      "scene": "繁忙的港口，貨櫃上印著股票代號，岸邊大型跑馬燈顯示行情，起重機不停上下。",
+      "url": "https://www.pscnet.com.tw/pscnetStock/index.do"
+    },
+    {
+      "id": "counter", "no": "04", "category": "S", "hex": [0, -1], "model": "kiosk",
+      "name": { "zh": "e 櫃台", "en": "e-Counter" },
+      "tagline": { "zh": "不用出門也能辦好的事", "en": "Things you can do without leaving home" },
+      "body": {
+        "zh": "線上開戶、密碼解鎖、文件簽署、憑證申請都能在網路上完成。另有日電子帳單、統e分戶帳、KYC 風險評估與定期審查，以及結合 OPENPOINT 點數的統e好康+。",
+        "en": "Open an account, unlock a password, sign documents and apply for certificates online. Also: daily e-statements, the 統e sub-account, KYC risk assessment and periodic review, and 統e好康+ which links to OPENPOINT rewards."
+      },
+      "sources": ["stock"],
+      "items": [
+        { "name": { "zh": "線上開戶", "en": "Online account opening" }, "desc": { "zh": "用手機或電腦完成開戶", "en": "Open an account by phone or computer" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52ce157000000b0001b6014e5e5a5" },
+        { "name": { "zh": "密碼解鎖", "en": "Password unlock" }, "desc": { "zh": "線上處理密碼鎖定", "en": "Unlock your password online" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52d3453000000428ae7cf6095053f" },
+        { "name": { "zh": "簽署專區", "en": "e-Signing" }, "desc": { "zh": "線上簽署各類文件", "en": "Sign documents online" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52e12130000006e04b4f345911083" },
+        { "name": { "zh": "憑證專區", "en": "Certificates" }, "desc": { "zh": "申請與管理下單憑證", "en": "Apply for and manage trading certificates" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52e170a000000eb1bfba32854efea" },
+        { "name": { "zh": "日電子帳單", "en": "Daily e-statement" }, "desc": { "zh": "申請每日電子對帳單", "en": "Sign up for daily electronic statements" }, "url": "https://eservices.pscnet.com.tw/eservice/tradereturn/login.php" },
+        { "name": { "zh": "統e分戶帳", "en": "統e sub-account" }, "desc": { "zh": "分戶帳服務", "en": "Sub-account service" }, "url": "https://webportal.pscnet.com.tw/event_2021001/index.php" },
+        { "name": { "zh": "KYC 風險評估", "en": "KYC risk assessment" }, "desc": { "zh": "定期審查與風險屬性評估", "en": "Periodic review and risk profiling" }, "url": "https://kyc.pscnet.com.tw/KYC/kyc00.php" },
+        { "name": { "zh": "統e好康+", "en": "統e好康+" }, "desc": { "zh": "結合 OPENPOINT 點數", "en": "Linked with OPENPOINT rewards" }, "url": "https://webportal.pscnet.com.tw/openpoint" }
+      ],
+      "scene": "一棟玻璃小屋，裡面一排自助服務機，門口有小人排隊拿著手機。",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52ce157000000b0001b6014e5e5a5"
+    },
+    {
+      "id": "loan", "no": "05", "category": "S", "hex": [-1, 1], "model": "vault",
+      "name": { "zh": "授信小鎮", "en": "Credit Town" },
+      "tagline": { "zh": "信用交易、借券與借貸", "en": "Margin, securities lending and loans" },
+      "body": {
+        "zh": "提供融資融券等信用交易、有價證券借貸（借券），以及不限用途款項借貸（統e貸）。這類業務牽涉槓桿，可能放大損失；官網設有信用交易宣導與借券交易須知，申請前宜先讀過。",
+        "en": "Margin trading, securities lending and general-purpose loans (統e貸). These involve leverage and can magnify losses; read the official margin-trading notice and lending terms before applying."
+      },
+      "sources": ["stock"],
+      "items": [
+        { "name": { "zh": "信用交易（融資融券）", "en": "Margin trading" }, "desc": { "zh": "槓桿交易，先讀信用交易宣導", "en": "Leveraged trading; read the notice first" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce14fd000000e26c9e7a1902be5b&sub_id=38d156b2370000004aaa8373e3fe2b5e" },
+        { "name": { "zh": "借券專區", "en": "Securities lending" }, "desc": { "zh": "出借或借入有價證券", "en": "Lend or borrow securities" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=38602d14a8000000cc55398be45feec4" },
+        { "name": { "zh": "統e貸", "en": "統e貸" }, "desc": { "zh": "不限用途款項借貸", "en": "General-purpose securities-backed loan" }, "url": "https://eservices.pscnet.com.tw/dm/LOAN/index.html" },
+        { "name": { "zh": "授信專區", "en": "Credit services" }, "desc": { "zh": "授信業務申請與契約", "en": "Credit applications and contracts" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=67ff2e99bb0000003881f0b4dab6bfca" }
+      ],
+      "scene": "一排連棟小屋，屋頂掛著天秤，一側有大型保險箱。",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=67ff2e99bb0000003881f0b4dab6bfca"
+    },
+    {
+      "id": "futures", "no": "06", "category": "P", "hex": [1, -2], "model": "lighthouse",
+      "name": { "zh": "期貨燈塔", "en": "Futures Lighthouse" },
+      "tagline": { "zh": "看向更遠的價格", "en": "Looking at prices further out" },
+      "body": {
+        "zh": "期貨與選擇權由關係企業統一期貨提供服務。期貨具高槓桿特性，自 2022 年 4 月 11 日起，新開戶交易人須填寫「期貨交易知識認知表」。",
+        "en": "Futures and options are offered by the affiliate President Futures. Futures are highly leveraged; since 11 April 2022, new account holders must complete a futures-knowledge questionnaire."
+      },
+      "sources": ["stock"],
+      "items": [
+        { "name": { "zh": "統一期貨", "en": "President Futures" }, "desc": { "zh": "關係企業，期貨與選擇權", "en": "Affiliate offering futures and options" }, "url": "https://www.pfcf.com.tw/" },
+        { "name": { "zh": "期貨交易知識認知表", "en": "Futures knowledge form" }, "desc": { "zh": "新開戶交易人必填", "en": "Required for new accounts" } }
+      ],
+      "scene": "海岬上的燈塔，燈光掃過海面，塔身刻著時間刻度。",
+      "url": "https://www.pfcf.com.tw/"
+    },
+    {
+      "id": "warrant", "no": "07", "category": "P", "hex": [1, -1], "model": "park",
+      "name": { "zh": "權證遊樂園", "en": "Warrant Park" },
+      "tagline": { "zh": "權證、ETN 與 CBAS", "en": "Warrants, ETNs and CBAS" },
+      "body": {
+        "zh": "統一證券發行權證與 ETN（指數投資證券），並經營可轉債資產交換（CBAS），各有獨立的資訊網站。這些商品結構較複雜，有些具槓桿，交易前宜先了解其風險。",
+        "en": "The firm issues warrants and ETNs and runs convertible-bond asset swaps (CBAS), each with its own site. These products are complex and some are leveraged; understand the risks first."
+      },
+      "sources": ["stock"],
+      "items": [
+        { "name": { "zh": "權證", "en": "Warrants" }, "desc": { "zh": "權證資訊網", "en": "Warrant information site" }, "url": "https://warrant.pscnet.com.tw/j/" },
+        { "name": { "zh": "ETN", "en": "ETN" }, "desc": { "zh": "指數投資證券", "en": "Exchange-traded notes" }, "url": "https://promote.pscnet.com.tw/Etn/start" },
+        { "name": { "zh": "CBAS", "en": "CBAS" }, "desc": { "zh": "可轉債資產交換資訊網", "en": "Convertible-bond asset swap site" }, "url": "https://cbas16889.pscnet.com.tw/home/1762752944577" }
+      ],
+      "scene": "小型遊樂園：雲霄飛車、旋轉木馬與摩天輪，每節車廂顏色不同。",
+      "url": "https://warrant.pscnet.com.tw/j/"
+    },
+    {
+      "id": "bond", "no": "08", "category": "P", "hex": [1, 1], "model": "river",
+      "name": { "zh": "債券河", "en": "Bond River" },
+      "tagline": { "zh": "穩定流動的固定收益", "en": "Fixed income, flowing steadily" },
+      "body": {
+        "zh": "債券業務包含台幣債券、外幣債券、附條件交易與結構型商品，每日發布債市晨報，並公告債券承銷資訊。",
+        "en": "NT$ bonds, foreign-currency bonds, repos and structured products, with a daily bond-market report and underwriting notices."
+      },
+      "sources": ["stock"],
+      "items": [
+        { "name": { "zh": "台幣債券", "en": "NT$ bonds" }, "desc": { "zh": "新台幣計價債券", "en": "Bonds in New Taiwan dollars" }, "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38ccd126870000001487c43695c111ac" },
+        { "name": { "zh": "外幣債券", "en": "Foreign-currency bonds" }, "desc": { "zh": "外幣計價債券", "en": "Bonds in foreign currencies" }, "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38ccd102b1000000d39bbd65cc40a087" },
+        { "name": { "zh": "附條件交易", "en": "Repos" }, "desc": { "zh": "約定期間與利率的債券交易", "en": "Bond trades with agreed term and rate" }, "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38ccd0d836000000f871040930e61b67" },
+        { "name": { "zh": "結構型商品", "en": "Structured products" }, "desc": { "zh": "結構較複雜，注意風險", "en": "Complex; mind the risks" }, "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38cccd8e4300000016775a2f9ad1c414" },
+        { "name": { "zh": "債券承銷", "en": "Bond underwriting" }, "desc": { "zh": "承銷公告", "en": "Underwriting notices" }, "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38cd482961000000e611b4eb31134cfa" }
+      ],
+      "scene": "一條緩流的河，河上有平底船載著卷軸，河岸設有水閘門。",
+      "url": "https://www.pscnet.com.tw/pscnetBond/index.do"
+    },
+    {
+      "id": "global", "no": "09", "category": "P", "hex": [0, 1], "model": "airport",
+      "name": { "zh": "環球航站", "en": "Global Terminal" },
+      "tagline": { "zh": "從台灣出發，投資海外市場", "en": "From Taiwan to overseas markets" },
+      "body": {
+        "zh": "透過複委託可以交易美股、港股、陸股、日股等海外市場，也有美股定期存股。官網整理了開戶資格、交易時間、各市場規則與休市行事曆。",
+        "en": "Sub-brokerage gives access to US, Hong Kong, China and Japan markets, plus a US-stock regular savings plan. The site covers eligibility, trading hours, market rules and holiday calendars."
+      },
+      "sources": ["stock"],
+      "items": [
+        { "name": { "zh": "開戶資格", "en": "Eligibility" }, "desc": { "zh": "複委託開戶條件與文件", "en": "Requirements and documents" }, "url": "https://www.pscnet.com.tw/pscnetForeign/menuMain.do?main_id=38cd932cc7000000266759d5227769cb" },
+        { "name": { "zh": "交易時間", "en": "Trading hours" }, "desc": { "zh": "各市場交易時段", "en": "Sessions by market" }, "url": "https://www.pscnet.com.tw/pscnetForeign/menuMain.do?main_id=38cd922dba000000753c80e4e57d6801" },
+        { "name": { "zh": "美股・港股・陸股・日股", "en": "US · HK · China · Japan" }, "desc": { "zh": "各市場報價網站", "en": "Quote sites by market" }, "url": "https://www.pscnet.com.tw/pscnetForeign/menuMain.do?main_id=38cd90a5b50000006ac9154d1f687f5e" },
+        { "name": { "zh": "美股定期存股", "en": "US regular savings plan" }, "desc": { "zh": "定期定額買美股", "en": "Buy US stocks on a schedule" }, "url": "https://www.pscnet.com.tw/pscnetForeign/menuMain.do?main_id=38cd925137000000fee6283c386f67ae&sub_id=5094e45cf000000054e4712a7d5a0a3e" },
+        { "name": { "zh": "市場行事曆", "en": "Market calendar" }, "desc": { "zh": "各地休市日", "en": "Holidays by market" }, "url": "https://www.pscnet.com.tw/pscnetForeign/menuMain.do?main_id=38cda4bfb90000005024ffab692739a9" }
+      ],
+      "scene": "小型機場航廈，跑道上有飛機起降，出發看板顯示紐約、香港、上海、東京。",
+      "url": "https://www.pscnet.com.tw/pscnetForeign/index.do"
+    },
+    {
+      "id": "wealth", "no": "10", "category": "W", "hex": [1, 0], "model": "manor",
+      "name": { "zh": "財富莊園", "en": "Wealth Manor" },
+      "tagline": { "zh": "長期規劃的家", "en": "Home of long-term planning" },
+      "body": {
+        "zh": "財富管理包含台股定期存股、以長期退休規劃為定位的信託投資平台「樂樂退」、持股信託等。2026 年獲《財訊》財富管理大獎最佳創意行銷、最佳財富增值、最佳業務團隊與最佳永續推動四項。",
+        "en": "Wealth services include a Taiwan-stock regular savings plan, 樂樂退 (a trust-based platform aimed at long-term retirement planning) and employee stock trusts. In 2026 it won four Wealth Magazine wealth-management awards: creative marketing, wealth growth, sales team and sustainability."
+      },
+      "sources": ["stock", "about"],
+      "items": [
+        { "name": { "zh": "定期存股", "en": "Regular savings plan" }, "desc": { "zh": "定期定額買台股", "en": "Buy Taiwan stocks on a schedule" }, "url": "https://eservices.pscnet.com.tw/dm/RegularQuota/index.php" },
+        { "name": { "zh": "樂樂退", "en": "樂樂退" }, "desc": { "zh": "依風險屬性配置基金組合的信託平台，定位長期退休規劃", "en": "Trust platform building fund portfolios by risk profile, for retirement" }, "url": "https://rwmtrade.pscnet.com.tw/robot/" },
+        { "name": { "zh": "持股信託", "en": "Employee stock trust" }, "desc": { "zh": "員工持股信託服務", "en": "Employee stock ownership trust" }, "url": "https://esot.pscnet.com.tw/eTrust" },
+        { "name": { "zh": "2026 財訊財富管理大獎四項", "en": "4 Wealth Magazine awards (2026)" }, "desc": { "zh": "創意行銷・財富增值・業務團隊・永續推動", "en": "Marketing · Wealth growth · Sales team · Sustainability" }, "url": "https://www.pscnet.com.tw/pscnetAbout/about.do" }
+      ],
+      "scene": "有花園的莊園，園丁照顧一排逐年長高的小樹，代表長期累積。",
+      "url": "https://nwmtrade.pscnet.com.tw/PscWM/"
+    },
+    {
+      "id": "insurance", "no": "11", "category": "W", "hex": [2, 0], "model": "umbrella",
+      "name": { "zh": "保代小屋", "en": "Insurance Cottage" },
+      "tagline": { "zh": "為人生加一層保障", "en": "An extra layer of protection" },
+      "body": {
+        "zh": "透過保險代理業務提供保險商品，與財富管理一起構成較完整的資產規劃。",
+        "en": "Insurance products via the insurance-agency business, rounding out asset planning alongside wealth management."
+      },
+      "sources": ["stock"],
+      "items": [
+        { "name": { "zh": "保險代理", "en": "Insurance agency" }, "desc": { "zh": "保險商品服務", "en": "Insurance products" }, "url": "https://insurance.pscnet.com.tw/ia/" }
+      ],
+      "scene": "一間有大雨傘造型屋頂的小屋，雨滴落在傘外。",
+      "url": "https://insurance.pscnet.com.tw/ia/"
+    },
+    {
+      "id": "lab", "no": "12", "category": "S", "hex": [2, -1], "model": "tower",
+      "name": { "zh": "研究塔", "en": "Research Tower" },
+      "tagline": { "zh": "投信與投顧的瞭望台", "en": "Lookout for fund management and advisory" },
+      "body": {
+        "zh": "關係企業包含統一投信（ezmoney）與統一投顧。投顧提供投資早報、新聞評析、總經與 Fed 資訊、訪談與專題報告；投信負責基金與 ETF 的發行與管理。",
+        "en": "Affiliates include President Securities Investment Trust (ezmoney) and President Investment Consulting. The advisory arm publishes morning reports, news analysis, macro and Fed coverage and research; the trust arm issues and manages funds and ETFs."
+      },
+      "sources": ["stock", "history"],
+      "items": [
+        { "name": { "zh": "統一投信（ezmoney）", "en": "ezmoney (fund manager)" }, "desc": { "zh": "基金與 ETF", "en": "Funds and ETFs" }, "url": "https://www.ezmoney.com.tw/" },
+        { "name": { "zh": "投資早報", "en": "Morning report" }, "desc": { "zh": "每日盤前資訊", "en": "Daily pre-market notes" }, "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=39a45d4c1c000000e1923552a1b93e0b" },
+        { "name": { "zh": "Fed 資訊", "en": "Fed watch" }, "desc": { "zh": "總經與聯準會動態", "en": "Macro and Federal Reserve updates" }, "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=4c8e7697c5000000a9a7a7c34938c36a" },
+        { "name": { "zh": "專題報告", "en": "Research reports" }, "desc": { "zh": "產業與主題研究", "en": "Sector and thematic research" }, "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=39a55141fe000000b2b9ecbfbf4c803c" }
+      ],
+      "scene": "高塔頂端有望遠鏡與天線，塔內書架堆滿報告，窗邊有研究員在看圖表。",
+      "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/index.do"
+    },
+    {
+      "id": "registry", "no": "13", "category": "S", "hex": [0, -2], "model": "postoffice",
+      "name": { "zh": "股務代理所", "en": "Stock Registry" },
+      "tagline": { "zh": "幫上市櫃公司照顧股東", "en": "Looking after shareholders for listed companies" },
+      "body": {
+        "zh": "股務代理部門替上市、上櫃、興櫃及未上市櫃公司處理股東事務，包括股票過戶、質權異動、掛失、印鑑變更、股利領取，以及股東會與除權息資訊。",
+        "en": "The stock-transfer agency handles shareholder services for listed and unlisted companies: transfers, pledges, lost certificates, seal changes, dividend claims, AGMs and ex-dividend information."
+      },
+      "sources": ["stock"],
+      "items": [
+        { "name": { "zh": "股票過戶", "en": "Share transfers" }, "desc": { "zh": "過戶與質權異動", "en": "Transfers and pledges" }, "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuMain.do?main_id=38ccec1ab60000000162609d4e3f9caa" },
+        { "name": { "zh": "股利領取", "en": "Dividend claims" }, "desc": { "zh": "股利發放與領取", "en": "Claiming dividends" }, "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuMain.do?main_id=38ccea0f0c0000006598da5228fe836f" },
+        { "name": { "zh": "其他股務作業", "en": "Other services" }, "desc": { "zh": "掛失、印鑑變更等", "en": "Lost certificates, seal changes, etc." }, "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuMain.do?main_id=38cce9df84000000139e811d42f011de" }
+      ],
+      "scene": "古典郵局造型建築，郵差把信件送往各家公司的信箱。",
+      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/index.do"
+    },
+    {
+      "id": "forest", "no": "14", "category": "C", "hex": [3, -1], "model": "forest",
+      "name": { "zh": "永續森林", "en": "Sustainability Forest" },
+      "tagline": { "zh": "金融也要對社會負責", "en": "Finance owes something to society" },
+      "body": {
+        "zh": "1995 年 12 月成為亞洲第一家通過 ISO 9002 服務品質認證的證券商（官網自述）。近年推動永續金融、金融友善服務與反詐騙宣導，2025 年獲第十八屆台灣企業永續獎（TCSA）與第八屆全球企業永續獎（GCSA）。",
+        "en": "In December 1995 it became, by its own account, Asia's first securities firm certified to ISO 9002. It promotes sustainable finance, accessible services and anti-fraud awareness, and in 2025 received the 18th TCSA and 8th GCSA sustainability awards."
+      },
+      "sources": ["history", "csr", "rating"],
+      "items": [
+        { "name": { "zh": "1995 亞洲首家 ISO 9002 證券商", "en": "1995: Asia's first ISO 9002 broker" }, "desc": { "zh": "官網自述", "en": "Per the company" } },
+        { "name": { "zh": "信評 twA／twA-1，展望穩定", "en": "Rated twA / twA-1, stable" }, "desc": { "zh": "中華信評，2026/01/14", "en": "Taiwan Ratings, 2026-01-14" }, "url": "https://www.pscnet.com.tw/pscnetAbout/menuMain.do?main_id=38c76ef7c2000000a0e7875e2ae4b28a&sub_id=38c76f4cd000000000ab6f6efa9ead2a" },
+        { "name": { "zh": "2025 TCSA・GCSA", "en": "2025 TCSA · GCSA" }, "desc": { "zh": "台灣與全球企業永續獎", "en": "Taiwan and Global Corporate Sustainability Awards" }, "url": "https://www.pscnet.com.tw/pscnetAbout/csrArea.do" },
+        { "name": { "zh": "反詐騙專區", "en": "Anti-fraud" }, "desc": { "zh": "反詐騙宣導", "en": "Fraud awareness" }, "url": "https://www.pscnet.com.tw/pscnetStock/menuContent.do?main_id=49605e76ed000000617c1b49652b3167&sub_id=49605fc75f000000d5b7e04ef03bb5ed&id=4960a360c000000037b624c757559961&function_id=" },
+        { "name": { "zh": "金融友善專區", "en": "Accessible finance" }, "desc": { "zh": "友善金融服務", "en": "Accessible financial services" }, "url": "https://www.pscnet.com.tw/pscnetAccessibility/tab04.do" }
+      ],
+      "scene": "一片森林，中央有一棵大樹，樹下有小人辦座談會，林間掛著盾牌形狀的反詐騙告示牌。",
+      "url": "https://www.pscnet.com.tw/pscnetAbout/csrArea.do"
+    }
+  ],
+
+  "edges": [
+    { "a": "bridge", "b": "harbour", "kind": "history", "reason": { "zh": "創立三年後，合併九家經紀商，島一下子變大", "en": "Three years after founding, nine brokers merged in" } },
+    { "a": "bridge", "b": "counter", "reason": { "zh": "開戶可以臨櫃，也可以線上", "en": "Open an account at a branch or online" } },
+    { "a": "counter", "b": "port", "reason": { "zh": "開好戶，就能開始下單", "en": "Once the account is open, you can trade" } },
+    { "a": "counter", "b": "loan", "reason": { "zh": "信用交易與借貸要先在授信專區申請", "en": "Margin and loans start with a credit application" } },
+    { "a": "port", "b": "loan", "reason": { "zh": "有些投資人會用信用交易放大部位，風險也跟著放大", "en": "Some use margin to enlarge positions, enlarging risk too" } },
+    { "a": "port", "b": "lab", "reason": { "zh": "研究報告與早報幫助判斷", "en": "Research and morning notes inform decisions" } },
+    { "a": "port", "b": "registry", "reason": { "zh": "持有股票就會遇到股東會、除權息與股利", "en": "Holding shares means AGMs, ex-dividend dates and dividends" } },
+    { "a": "port", "b": "warrant", "reason": { "zh": "用權證、ETN 參與個股或指數", "en": "Warrants and ETNs track stocks or indices" } },
+    { "a": "port", "b": "futures", "reason": { "zh": "想避險或交易指數，走向期貨", "en": "Hedging or index trading leads to futures" } },
+    { "a": "futures", "b": "warrant", "reason": { "zh": "都是槓桿或結構較複雜的商品", "en": "Both are leveraged or structurally complex" } },
+    { "a": "port", "b": "global", "reason": { "zh": "從台股延伸到海外市場", "en": "From Taiwan stocks to overseas markets" } },
+    { "a": "port", "b": "wealth", "reason": { "zh": "從短期交易轉向定期存股與長期累積", "en": "From trading to regular saving and long-term building" } },
+    { "a": "global", "b": "bond", "reason": { "zh": "外幣債券也是海外資產的一部分", "en": "Foreign-currency bonds are overseas assets too" } },
+    { "a": "global", "b": "wealth", "reason": { "zh": "美股定期存股，把海外市場放進長期規劃", "en": "US savings plans bring overseas markets into long-term plans" } },
+    { "a": "bond", "b": "wealth", "reason": { "zh": "資產配置裡加入固定收益", "en": "Adding fixed income to the mix" } },
+    { "a": "lab", "b": "wealth", "reason": { "zh": "投信的基金與 ETF 是長期配置的常見工具", "en": "Funds and ETFs are common long-term building blocks" } },
+    { "a": "wealth", "b": "insurance", "reason": { "zh": "規劃好資產，再加一層保障", "en": "With assets planned, add protection" } },
+    { "a": "forest", "b": "counter", "reason": { "zh": "反詐騙與金融友善服務，保護每位投資人", "en": "Anti-fraud and accessibility protect every investor" } },
+    { "a": "forest", "b": "wealth", "reason": { "zh": "永續推動也是財富管理的一部分", "en": "Sustainability is part of wealth management" } }
+  ],
+
+  "timeline": [
+    { "date": "1988", "title": { "zh": "統一證券成立", "en": "Founded" }, "island": "harbour", "source": "history" },
+    { "date": "1989-03", "title": { "zh": "更名為統一綜合證券", "en": "Renamed President Securities" }, "island": "harbour", "source": "history" },
+    { "date": "1989-04-03", "title": { "zh": "正式進入證券市場", "en": "Entered the market" }, "island": "harbour", "source": "history" },
+    { "date": "1991-09", "title": { "zh": "一次合併九家專業經紀商", "en": "Merged nine brokerages at once" }, "island": "bridge", "source": "history" },
+    { "date": "1995-12", "title": { "zh": "亞洲首家通過 ISO 9002 的證券商（官網自述）", "en": "Asia's first ISO 9002 broker (per company)" }, "island": "forest", "source": "history" },
+    { "date": "1999-03", "title": { "zh": "首度通過中華信評評等", "en": "First rated by Taiwan Ratings" }, "island": "forest", "source": "history" },
+    { "date": "2022-04-11", "title": { "zh": "期貨新開戶須填知識認知表", "en": "Futures knowledge form required" }, "island": "futures", "source": "stock" },
+    { "date": "2025", "title": { "zh": "獲 TCSA 台灣企業永續獎、GCSA 全球企業永續獎", "en": "TCSA and GCSA sustainability awards" }, "island": "forest", "source": "csr" },
+    { "date": "2026-01-14", "title": { "zh": "信評 twA／twA-1，展望穩定", "en": "Rated twA / twA-1, outlook stable" }, "island": "forest", "source": "rating" },
+    { "date": "2026-09", "title": { "zh": "財訊財富管理大獎四項", "en": "Four Wealth Magazine awards" }, "island": "wealth", "source": "about" },
+    { "date": "2026-09-16", "title": { "zh": "青埔簡易分公司開業", "en": "Qingpu branch opens" }, "island": "bridge", "source": "qingpu" }
+  ],
+
+  "tour": [
+    { "island": "counter", "text": { "zh": "一切從開戶開始：在 e 櫃台，用手機就能完成線上開戶。", "en": "It all starts with an account: open one online at the e-Counter." } },
+    { "island": "bridge", "text": { "zh": "也可以走進全台的分公司，臨櫃辦理。", "en": "Or walk into one of the branches across Taiwan." } },
+    { "island": "port", "text": { "zh": "第一次下單台股，挑一個順手的管道：電腦、網頁、App 或電話。", "en": "First Taiwan-stock order: pick a channel—desktop, web, app or phone." } },
+    { "island": "lab", "text": { "zh": "開始讀投資早報和研究報告，學著自己判斷。", "en": "Start reading morning notes and research, and learn to judge for yourself." } },
+    { "island": "registry", "text": { "zh": "成為股東後，會收到股東會通知，也會遇到除權息和股利。", "en": "As a shareholder, AGM notices, ex-dividend dates and dividends arrive." } },
+    { "island": "loan", "text": { "zh": "有人會接觸信用交易。槓桿會放大獲利，也會放大損失，先讀懂宣導再說。", "en": "Some try margin. Leverage magnifies gains and losses alike—read the notice first." } },
+    { "island": "warrant", "text": { "zh": "權證、ETN、期貨這些商品各有槓桿與規則，了解之後再靠近。", "en": "Warrants, ETNs and futures each have leverage and rules—understand them first." } },
+    { "island": "global", "text": { "zh": "把視野拉到海外，用複委託交易美股、港股或日股。", "en": "Look overseas: trade US, Hong Kong or Japanese stocks via sub-brokerage." } },
+    { "island": "bond", "text": { "zh": "資產配置裡，慢慢加入一些債券。", "en": "Gradually, bonds join the portfolio." } },
+    { "island": "wealth", "text": { "zh": "定期存股、退休規劃，讓時間替長期目標工作。", "en": "Regular saving and retirement planning let time work on long-term goals." } },
+    { "island": "insurance", "text": { "zh": "替自己和家人加一層保障。", "en": "Add a layer of protection for yourself and your family." } },
+    { "island": "forest", "text": { "zh": "島也在照顧你：反詐騙宣導、金融友善服務，一路陪著。", "en": "The island looks out for you too: anti-fraud and accessible services, all along the way." } }
+  ]
+}
