@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#E8601C">
+  <meta name="description" content="非官方個人作品：以一座 3D 小島介紹統一綜合證券的服務與歷史。不構成投資建議。">
+  <title>統一金融島｜金融服務地圖</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 90,27 90,73 50,96 10,73 10,27' fill='%23E8601C'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-view="map">
+  <div id="loading"><span>正在搭建金融島…</span></div>
+
+  <header id="top">
+    <a class="brand" href="./"><b>UNI ISLAND.</b><span id="brand-title">統一金融島</span></a>
+    <nav id="views" aria-label="View"></nav>
+    <div id="tools"></div>
+  </header>
+
+  <main>
+    <div id="stage" aria-label="3D map"></div>
+    <section id="hero"></section>
+    <section id="list" class="sheet"></section>
+    <section id="timeline" class="sheet"></section>
+    <aside id="panel" hidden></aside>
+    <section id="tourbar" hidden aria-live="polite"></section>
+  </main>
+
+  <footer id="foot">
+    <span id="unofficial">非官方個人作品・不構成投資建議</span>
+    <span id="hint"></span>
+    <span id="legend"></span>
+  </footer>
+
+  <dialog id="about">
+    <button type="button" class="x" data-act="close" aria-label="Close">×</button>
+    <div class="content"></div>
+  </dialog>
+
+  <noscript><p style="padding:24px">這個網站需要 JavaScript。This site needs JavaScript.</p></noscript>
+</body>
+</html>
