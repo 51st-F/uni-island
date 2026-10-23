@@ -1,29 +1,15 @@
 const UI = {
-  zh: {
-    map: '全景', list: '清單', time: '時間', tour: '導覽', labels: '名牌', paths: '動線', about: '關於',
-    start: '開始導覽', explore: '自己逛逛', services: '服務', connections: '動線', sources: '出處', official: '前往官網',
-    pause: '暫停', play: '播放', prev: '上一站', next: '下一站', exit: '結束', replay: '重播',
-    index: 'THE ISLAND INDEX', indexSub: (n, m) => `${n} 座島・${m} 項服務`, pick: '點一格，進入那座島。',
-    history: '公司沿革', close: '關閉', checked: '資料查核日期', noWebgl: '你的瀏覽器無法顯示 3D 地圖，先以清單呈現。',
-    tourTitle: '一位投資人的一生', back: '回到全景', category: '類別', all: '全部',
-  },
-  en: {
-    map: 'Map', list: 'List', time: 'Timeline', tour: 'Tour', labels: 'Labels', paths: 'Paths', about: 'About',
-    start: 'Start the tour', explore: 'Explore freely', services: 'Services', connections: 'Paths', sources: 'Sources', official: 'Official page',
-    pause: 'Pause', play: 'Play', prev: 'Previous', next: 'Next', exit: 'Exit', replay: 'Replay',
-    index: 'THE ISLAND INDEX', indexSub: (n, m) => `${n} islands · ${m} services`, pick: 'Pick a hex to enter its island.',
-    history: 'Company history', close: 'Close', checked: 'Content checked', noWebgl: "Your browser can't show the 3D map, so here's the list.",
-    tourTitle: "One investor's life", back: 'Back to map', category: 'Category', all: 'All',
-  },
+  map: '全景', list: '清單', time: '時間', tour: '導覽', labels: '名牌', paths: '動線', about: '關於',
+  start: '開始導覽', explore: '自己逛逛', services: '服務', connections: '動線', sources: '出處', official: '前往官網',
+  pause: '暫停', play: '播放', prev: '上一站', next: '下一站', exit: '結束', replay: '重播',
+  index: 'THE ISLAND INDEX', indexSub: (n, m) => `${n} 座島・${m} 項服務`, pick: '點一格，進入那座島。',
+  history: '公司沿革', close: '關閉', checked: '資料查核日期', noWebgl: '你的瀏覽器無法顯示 3D 地圖，先以清單呈現。',
+  tourTitle: '一位投資人的一生',
 };
 const STEP_MS = 6500;
 
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const store = {
-  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
-  set(k, v) { try { localStorage.setItem(k, v); } catch { /* private mode */ } },
-};
 const hasWebGL = (() => { try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch { return false; } })();
 
 const data = await fetch('data/island.json').then((r) => r.json());
@@ -31,30 +17,26 @@ const byId = Object.fromEntries(data.islands.map((i) => [i.id, i]));
 const cat = Object.fromEntries(data.categories.map((c) => [c.id, c]));
 const src = Object.fromEntries(data.sources.map((s) => [s.id, s]));
 
-const params = new URLSearchParams(location.search);
 const state = {
-  lang: ['zh', 'en'].includes(params.get('lang')) ? params.get('lang') : store.get('lang') === 'en' ? 'en' : 'zh',
   view: hasWebGL ? 'map' : 'list',
   selected: null,
   labels: true,
   paths: true,
   tour: null, // { step, playing, timer }
 };
-const L = (o) => (o && typeof o === 'object' ? o[state.lang] ?? o.zh : o ?? '');
-const T = () => UI[state.lang];
 
 let world = null;
 if (hasWebGL) {
   // canvas textures (ticker, departure board) need their glyphs loaded before they're drawn
   const fontsLoaded = Promise.all([
-    document.fonts.load('bold 40px "JetBrains Mono"', 'UNI ISLAND NEW YORK'),
-    document.fonts.load('bold 40px "Noto Sans TC"', '證券港金贏島好探統起發指'),
+    document.fonts.load('bold 40px "JetBrains Mono"', 'UNI ISLAND API'),
+    document.fonts.load('bold 40px "Noto Sans TC"', '證券港金贏島好探統起發指紐約香上海東京'),
   ]).catch(() => {});
   await Promise.race([fontsLoaded, new Promise((r) => setTimeout(r, 3000))]);
   const { createWorld } = await import('./scene.js');
   world = createWorld($('#stage'), data, {
     onPick: (id) => { if (state.tour) stopTour(); select(id); },
-    onHover: (id) => { $('#hint').textContent = id ? `${byId[id].no} ${L(byId[id].name)}` : T().pick; },
+    onHover: (id) => { $('#hint').textContent = id ? `${byId[id].no} ${byId[id].name}` : UI.pick; },
   });
 } else {
   document.body.classList.add('no-webgl');
@@ -63,65 +45,61 @@ if (hasWebGL) {
 // ---------- rendering ----------
 
 function renderChrome() {
-  const t = T(), m = data.meta;
-  document.documentElement.lang = state.lang === 'zh' ? 'zh-Hant-TW' : 'en';
-  document.title = `${L(m.title)}｜${L(m.projectName)}`;
-  $('#brand-title').textContent = L(m.title);
+  const t = UI, m = data.meta;
+  document.title = `${m.title}｜${m.projectName}`;
+  $('#brand-title').textContent = m.title;
   $('#views').innerHTML = ['map', 'list', 'time'].map((v) => `<button type="button" data-view="${v}" aria-pressed="${state.view === v}" ${v === 'map' && !hasWebGL ? 'disabled' : ''}>${t[v]}</button>`).join('');
   $('#tools').innerHTML = `
     <button type="button" data-act="tour" ${hasWebGL ? '' : 'disabled'}>${t.tour}</button>
     <button type="button" data-act="labels" aria-pressed="${state.labels}" ${hasWebGL ? '' : 'disabled'}>${t.labels}</button>
     <button type="button" data-act="paths" aria-pressed="${state.paths}" ${hasWebGL ? '' : 'disabled'}>${t.paths}</button>
-    <button type="button" data-act="lang" aria-label="Switch language">${state.lang === 'zh' ? 'EN' : '中'}</button>
     <button type="button" data-act="about">${t.about}</button>`;
-  $('#unofficial').textContent = L(m.unofficial);
+  $('#unofficial').textContent = m.unofficial;
   $('#hint').textContent = t.pick;
 
   const items = data.islands.reduce((s, i) => s + i.items.length, 0);
   $('#hero').innerHTML = `
     <p class="eyebrow">${esc(m.eyebrow)} <span>${esc(m.projectTag)}</span></p>
     <p class="hero-num">${String(data.islands.length).padStart(2, '0')}<small>${esc(t.indexSub(data.islands.length, items))}</small></p>
-    <h1>${L(m.heroTitle)}</h1>
-    <p class="hero-sub">${L(m.heroSub)}</p>
-    <p class="hero-warn">${esc(L(m.unofficial))}</p>
+    <h1>${m.heroTitle}</h1>
+    <p class="hero-sub">${m.heroSub}</p>
+    <p class="hero-warn">${esc(m.unofficial)}</p>
     <div class="hero-actions">
       ${hasWebGL ? `<button type="button" class="primary" data-act="tour">${t.start}</button>` : ''}
       <button type="button" data-act="explore">${hasWebGL ? t.explore : t.list}</button>
     </div>
     ${hasWebGL ? '' : `<p class="hero-warn">${esc(t.noWebgl)}</p>`}`;
 
-  $('#legend').innerHTML = data.categories.map((c) => `<span style="--cat:${c.color}">${esc(L(c.name))}</span>`).join('');
-  world?.setLabelText((i) => `<span class="no">${i.no}</span>${esc(L(i.name))}`);
+  $('#legend').innerHTML = data.categories.map((c) => `<span style="--cat:${c.color}">${esc(c.name)}</span>`).join('');
+  world?.setLabelText((i) => `<span class="no">${i.no}</span>${esc(i.name)}`);
 }
 
 function renderPanel() {
   const panel = $('#panel');
   const i = byId[state.selected];
   if (!i) { panel.hidden = true; return; }
-  const t = T(), c = cat[i.category];
+  const t = UI, c = cat[i.category];
   const conns = data.edges.filter((e) => e.a === i.id || e.b === i.id).map((e) => ({ other: byId[e.a === i.id ? e.b : e.a], e }));
-  const other = state.lang === 'zh' ? 'en' : 'zh';
   panel.hidden = false;
   panel.style.setProperty('--cat', c.color);
   panel.innerHTML = `
     <header>
-      <p class="kicker"><span class="no">${i.no}</span><span class="chip">${esc(L(c.name))}</span></p>
-      <h2>${esc(L(i.name))}</h2>
-      <p class="alt">${esc(i.name[other])}</p>
+      <p class="kicker"><span class="no">${i.no}</span><span class="chip">${esc(c.name)}</span></p>
+      <h2>${esc(i.name)}</h2>
       <button type="button" class="x" data-act="close" aria-label="${t.close}">×</button>
     </header>
-    <p class="tagline">${esc(L(i.tagline))}</p>
-    <p class="body">${esc(L(i.body))}</p>
+    <p class="tagline">${esc(i.tagline)}</p>
+    <p class="body">${esc(i.body)}</p>
     <h3>${t.services}<span>${i.items.length}</span></h3>
     <ul class="items">${i.items.map((it) => `
       <li>${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">` : '<div>'}
-        <strong>${esc(L(it.name))}</strong><span>${esc(L(it.desc))}</span>
+        <strong>${esc(it.name)}</strong><span>${esc(it.desc)}</span>
       ${it.url ? '<i aria-hidden="true">↗</i></a>' : '</div>'}</li>`).join('')}
     </ul>
     <h3>${t.connections}<span>${conns.length}</span></h3>
     <ul class="conns">${conns.map(({ other: o, e }) => `
       <li><button type="button" data-goto="${o.id}" style="--cat:${cat[o.category].color}">
-        <strong><span class="no">${o.no}</span>${esc(L(o.name))}</strong><span>${esc(L(e.reason))}</span>
+        <strong><span class="no">${o.no}</span>${esc(o.name)}</strong><span>${esc(e.reason)}</span>
       </button></li>`).join('')}
     </ul>
     <h3>${t.sources}</h3>
@@ -132,17 +110,17 @@ function renderPanel() {
 
 function renderList() {
   $('#list').innerHTML = `
-    <header class="sheet-head"><p class="eyebrow">${T().index}</p><h2>${esc(L(data.meta.projectName))}</h2>
-      ${hasWebGL ? '' : `<p class="hero-warn">${esc(T().noWebgl)}</p>`}</header>
+    <header class="sheet-head"><p class="eyebrow">${UI.index}</p><h2>${esc(data.meta.projectName)}</h2>
+      ${hasWebGL ? '' : `<p class="hero-warn">${esc(UI.noWebgl)}</p>`}</header>
     ${data.categories.map((c) => `
       <section style="--cat:${c.color}">
-        <h3><span class="dot"></span>${esc(L(c.name))}<small>${esc(c.name[state.lang === 'zh' ? 'en' : 'zh'])}</small></h3>
+        <h3><span class="dot"></span>${esc(c.name)}</h3>
         <div class="cards">${data.islands.filter((i) => i.category === c.id).map((i) => `
           <button type="button" class="card" data-goto="${i.id}">
             <span class="no">${i.no}</span>
-            <strong>${esc(L(i.name))}</strong>
-            <span class="tag">${esc(L(i.tagline))}</span>
-            <span class="count">${i.items.length} · ${esc(T().services)}</span>
+            <strong>${esc(i.name)}</strong>
+            <span class="tag">${esc(i.tagline)}</span>
+            <span class="count">${i.items.length} · ${esc(UI.services)}</span>
           </button>`).join('')}
         </div>
       </section>`).join('')}`;
@@ -150,23 +128,23 @@ function renderList() {
 
 function renderTimeline() {
   $('#timeline').innerHTML = `
-    <header class="sheet-head"><p class="eyebrow">TIMELINE</p><h2>${T().history}</h2></header>
+    <header class="sheet-head"><p class="eyebrow">TIMELINE</p><h2>${UI.history}</h2></header>
     <ol>${data.timeline.map((ev) => {
       const i = byId[ev.island];
       return `<li style="--cat:${cat[i.category].color}">
         <time>${esc(ev.date)}</time>
-        <button type="button" data-goto="${i.id}"><strong>${esc(L(ev.title))}</strong><span><span class="no">${i.no}</span>${esc(L(i.name))}</span></button>
+        <button type="button" data-goto="${i.id}"><strong>${esc(ev.title)}</strong><span><span class="no">${i.no}</span>${esc(i.name)}</span></button>
         <a href="${esc(src[ev.source].url)}" target="_blank" rel="noopener" class="src">${esc(src[ev.source].title)}</a>
       </li>`;
     }).join('')}</ol>`;
 }
 
 function renderAbout() {
-  const m = data.meta, t = T();
+  const m = data.meta, t = UI;
   $('#about .content').innerHTML = `
     <p class="eyebrow">${esc(m.eyebrow)}</p>
-    <h2>${esc(L(m.title))}</h2>
-    <p>${esc(L(m.disclaimer))}</p>
+    <h2>${esc(m.title)}</h2>
+    <p>${esc(m.disclaimer)}</p>
     <h3>${t.sources}</h3>
     <ul class="srcs">${data.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a></li>`).join('')}</ul>
     <p class="muted">${t.checked}：${esc(m.checkedAt)}</p>`;
@@ -175,12 +153,12 @@ function renderAbout() {
 function renderTourBar() {
   const bar = $('#tourbar');
   if (!state.tour) { bar.hidden = true; return; }
-  const t = T(), s = state.tour, step = data.tour[s.step], i = byId[step.island];
+  const t = UI, s = state.tour, step = data.tour[s.step], i = byId[step.island];
   const last = s.step === data.tour.length - 1;
   bar.hidden = false;
   bar.innerHTML = `
     <div class="tb-head"><span class="eyebrow">${t.tourTitle}</span><span class="count">${String(s.step + 1).padStart(2, '0')} / ${String(data.tour.length).padStart(2, '0')}</span></div>
-    <p class="tb-text"><span class="no" style="--cat:${cat[i.category].color}">${i.no} ${esc(L(i.name))}</span>${esc(L(step.text))}</p>
+    <p class="tb-text"><span class="no" style="--cat:${cat[i.category].color}">${i.no} ${esc(i.name)}</span>${esc(step.text)}</p>
     <div class="tb-progress"><span style="animation-duration:${STEP_MS}ms" class="${s.playing ? 'run' : ''}"></span></div>
     <div class="tb-ctrl">
       <button type="button" data-tour="prev" ${s.step === 0 ? 'disabled' : ''}>‹ ${t.prev}</button>
@@ -284,12 +262,6 @@ document.addEventListener('click', (e) => {
     case 'explore': hideHero(); if (!hasWebGL) setView('list'); break;
     case 'labels': state.labels = !state.labels; world?.setLabels(state.labels); b.setAttribute('aria-pressed', state.labels); break;
     case 'paths': state.paths = !state.paths; world?.setEdges(state.paths); b.setAttribute('aria-pressed', state.paths); break;
-    case 'lang':
-      state.lang = state.lang === 'zh' ? 'en' : 'zh';
-      store.set('lang', state.lang);
-      { const heroHidden = $('#hero').hidden; renderAll(); $('#hero').hidden = heroHidden; }
-      setView(state.view);
-      break;
     case 'about': $('#about').showModal(); break;
     case 'close': if (b.closest('dialog')) b.closest('dialog').close(); else { if (state.tour) stopTour(); select(null); } break;
   }

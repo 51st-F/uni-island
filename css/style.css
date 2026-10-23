@@ -111,7 +111,6 @@ body:not([data-view="map"]) .label-layer { display: none; }
 .kicker .no { font-size: 13px; }
 .chip { font-size: 11px; font-weight: 700; color: #fff; background: var(--cat); border-radius: 999px; padding: 2px 9px; }
 #panel h2 { font-size: 26px; font-weight: 900; margin: 0; line-height: 1.25; }
-.alt { margin: 2px 0 0; font: 500 12px var(--mono); color: var(--ink-3); letter-spacing: .04em; }
 .x { position: absolute; right: 0; top: 14px; border: 0; background: var(--paper-2); width: 32px; height: 32px; border-radius: 50%; font-size: 20px; line-height: 1; }
 .tagline { font-weight: 700; color: var(--cat); margin: 4px 0 8px; }
 .body { margin: 0 0 18px; color: var(--ink-2); }
@@ -140,7 +139,6 @@ body[data-view="list"] #hero, body[data-view="time"] #hero { display: none; }
 .sheet-head h2 { font-size: 30px; font-weight: 900; margin: 6px 0 24px; }
 #list section { margin-bottom: 28px; }
 #list h3 { display: flex; align-items: center; gap: 8px; font-size: 18px; margin: 0 0 12px; }
-#list h3 small { font: 500 11px var(--mono); color: var(--ink-3); letter-spacing: .08em; text-transform: uppercase; }
 .dot { width: 12px; height: 12px; background: var(--cat); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
 .card {

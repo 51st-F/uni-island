@@ -313,7 +313,7 @@ const builders = {
     const board = canvasTexture(256, 128, (x, w, h) => {
       x.fillStyle = '#1E2226'; x.fillRect(0, 0, w, h);
       x.font = 'bold 26px "JetBrains Mono", "Noto Sans TC", sans-serif'; x.fillStyle = '#FFD27A';
-      ['NEW YORK', 'HONG KONG', 'SHANGHAI', 'TOKYO'].forEach((s, i) => x.fillText(s, 12, 28 + i * 28));
+      ['紐約', '香港', '上海', '東京'].forEach((s, i) => x.fillText(s, 12, 28 + i * 28));
     });
     const sign = new THREE.Mesh(new THREE.PlaneGeometry(0.2, 0.1), new THREE.MeshBasicMaterial({ map: board }));
     sign.position.set(-0.15, 0.3, -0.24);
