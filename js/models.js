@@ -413,6 +413,39 @@ const builders = {
     } };
   },
 
+  orchard() {
+    const g = new THREE.Group();
+    const r = rng(23);
+    const FRUIT = [C.orange, C.red, C.gold, C.purple, C.green];
+    // three rows of fruit trees, each tree a different fruit
+    for (let row = 0; row < 3; row++) for (let col = 0; col < 3; col++) {
+      const x = -0.42 + col * 0.26 + (row % 2) * 0.1, z = -0.5 + row * 0.24;
+      const t = new THREE.Group();
+      t.add(cyl(0.018, 0.024, 0.14, C.woodDark, 0, 0, 0, 5), sphere(0.11, C.green, 0, 0.21, 0, 0));
+      const fc = FRUIT[(row * 3 + col) % FRUIT.length];
+      for (let k = 0; k < 5; k++) { const a = r() * Math.PI * 2, e = 0.12 + r() * 0.14; t.add(sphere(0.022, fc, Math.cos(a) * 0.1, e + 0.08, Math.sin(a) * 0.1)); }
+      t.position.set(x, 0, z);
+      g.add(t);
+    }
+    // a row of baskets, each holding a mix of fruit: one basket, many holdings
+    const baskets = [];
+    for (let i = 0; i < 4; i++) {
+      const b = new THREE.Group();
+      b.add(cyl(0.07, 0.05, 0.06, C.wood, 0, 0, 0, 8));
+      for (let k = 0; k < 5; k++) b.add(sphere(0.022, FRUIT[(i + k) % FRUIT.length], (k % 3 - 1) * 0.03, 0.07, (Math.floor(k / 3) - 0.5) * 0.04));
+      b.position.set(-0.36 + i * 0.17, 0, 0.4);
+      g.add(b);
+      baskets.push(b);
+    }
+    g.add(house(0.26, 0.18, 0.22, C.white, C.orange, 0.48, 0.12, -0.4));
+    const farmer = person(C.blue);
+    g.add(farmer);
+    return { group: g, update(t) {
+      farmer.position.set(-0.3 + (Math.sin(t * 0.3) * 0.5 + 0.5) * 0.55, 0, 0.24);
+      baskets.forEach((b, i) => { b.position.y = Math.max(0, Math.sin(t * 2 + i)) * 0.006; });
+    } };
+  },
+
   forest() {
     const g = new THREE.Group();
     const r = rng(19);

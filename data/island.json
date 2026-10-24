@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.1",
+  "schemaVersion": "2.2",
   "meta": {
     "slug": "uni-island",
     "title": "統一金融島",
@@ -11,8 +11,8 @@
     "loadingText": "正在搭建金融島…",
     "unofficial": "非官方個人作品・不構成投資建議",
     "themeColor": "#E8601C",
-    "checkedAt": "2026-10-23",
-    "disclaimer": "本網站為個人製作的非官方介紹性互動地圖，與統一綜合證券及其關係企業無任何隸屬或授權關係，內容整理自其官方網站公開資訊，僅供認識公司與服務之用，不構成任何投資建議或商品推介。信用交易、期貨、權證、ETN 等商品具槓桿或複雜結構，可能產生超過原始投入的損失。商品條件、費率與最新公告請以官網為準。資料查核日期：2026-10-23。島上的 3D 場景為示意插畫。"
+    "checkedAt": "2026-10-24",
+    "disclaimer": "本網站為個人製作的非官方介紹性互動地圖，與統一綜合證券及其關係企業無任何隸屬或授權關係，內容整理自其官方網站公開資訊，僅供認識公司與服務之用，不構成任何投資建議或商品推介。信用交易、期貨、權證、ETN 等商品具槓桿或複雜結構，可能產生超過原始投入的損失。商品條件、費率與最新公告請以官網為準。資料查核日期：2026-10-24。島上的 3D 場景為示意插畫。"
   },
   "sources": [
     {
@@ -54,6 +54,76 @@
       "id": "qingpu",
       "title": "【分公司開始營業公告】青埔簡易分公司（2026/09/08）",
       "url": "https://www.pscnet.com.tw/pscnetStock/index.do"
+    },
+    {
+      "id": "open",
+      "title": "線上開戶・注意事項",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52ce157000000b0001b6014e5e5a5"
+    },
+    {
+      "id": "newbie",
+      "title": "新手上路",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=38af20b312000000fbe955c0842d1a20&sub_id=38dbceb3790000007f43bfbf63ffdf28"
+    },
+    {
+      "id": "cert",
+      "title": "申請憑證",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=38af20b312000000fbe955c0842d1a20&sub_id=38dbcdc5cd000000b67d443c32b9033c"
+    },
+    {
+      "id": "hours",
+      "title": "交易時間",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=38af20b312000000fbe955c0842d1a20&sub_id=38dbcd6fa9000000961e5b983a17015a"
+    },
+    {
+      "id": "estmt",
+      "title": "電子交易聲明",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce14fd000000e26c9e7a1902be5b&sub_id=38d156897e000000cc8a3209e0f0aeb2"
+    },
+    {
+      "id": "opennotice",
+      "title": "開戶須知",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce14fd000000e26c9e7a1902be5b"
+    },
+    {
+      "id": "regular",
+      "title": "定期存股・常見問題",
+      "url": "https://eservices.pscnet.com.tw/dm/RegularQuota/index.php"
+    },
+    {
+      "id": "lele",
+      "title": "樂樂退・常見問題",
+      "url": "https://rwmtrade.pscnet.com.tw/robot/"
+    },
+    {
+      "id": "wm",
+      "title": "統一證券財富管理（基金總覽）",
+      "url": "https://nwmtrade.pscnet.com.tw/PscWM/"
+    },
+    {
+      "id": "etnwhat",
+      "title": "ETN 學堂・什麼是 ETN",
+      "url": "https://promote.pscnet.com.tw/Etn/school/what"
+    },
+    {
+      "id": "etndiff",
+      "title": "ETN 學堂・ETN 與 ETF 有什麼不同",
+      "url": "https://promote.pscnet.com.tw/Etn/school/diff"
+    },
+    {
+      "id": "ezabout",
+      "title": "統一投信簡介",
+      "url": "https://www.ezmoney.com.tw/news/info/22?tid=41"
+    },
+    {
+      "id": "ezflow",
+      "title": "統一投信・申購買回流程",
+      "url": "https://www.ezmoney.com.tw/news/info/4674?tid=5&tmp=1"
+    },
+    {
+      "id": "ezhome",
+      "title": "統一投信首頁（基金淨值與風險揭露）",
+      "url": "https://www.ezmoney.com.tw/"
     }
   ],
   "categories": [
@@ -210,7 +280,62 @@
         }
       ],
       "scene": "繁忙的港口，貨櫃上印著股票代號，岸邊大型跑馬燈顯示行情，起重機不停上下。",
-      "url": "https://www.pscnet.com.tw/pscnetStock/index.do"
+      "url": "https://www.pscnet.com.tw/pscnetStock/index.do",
+      "details": {
+        "start": {
+          "points": [
+            "線上開戶：需為本國成年自然人，準備雙證件與銀行存摺資料，用電腦或手機就能辦。",
+            "臨櫃開戶：本人攜帶身分證正本、附照片的第二證件正本與印章，到服務據點辦理。",
+            "開好戶之後，依序完成：首次變更密碼 → 申請電子憑證 → 登入看盤。",
+            "電子憑證：電腦用「憑證e總管」或電子憑證中心申請，手機在 e指發 App 裡點「立即申請」。"
+          ],
+          "sources": [
+            "open",
+            "newbie",
+            "cert"
+          ]
+        },
+        "caution": {
+          "points": [
+            "開戶前要先閱讀「開戶須知」，裡面依金管會規定揭露契約重要內容與風險。",
+            "電子憑證有效期限為 1 年，到期前要重新申請，否則無法網路下單。",
+            "網路交易可能遇到網路塞車、斷線、停電或交易所系統當機。委託單長時間停在「委託處理中」時，請改由營業員代為委託。"
+          ],
+          "sources": [
+            "opennotice",
+            "estmt"
+          ]
+        },
+        "tip": {
+          "title": "一天裡的台股電子交易時段",
+          "body": "盤中能下的不只整股，還有零股和盤後的定價交易。收盤後到隔天開盤前，也可以先掛預約單。颱風天要注意：如果下一個營業日臨時停止交易，預約單會自動作廢，不會順延，要重新下單。",
+          "table": [
+            [
+              "交易類別",
+              "電子交易時間"
+            ],
+            [
+              "整股交易",
+              "08:30–13:33"
+            ],
+            [
+              "盤中零股",
+              "09:00–13:30"
+            ],
+            [
+              "盤後零股",
+              "13:40–14:30"
+            ],
+            [
+              "定價交易",
+              "14:00–14:30"
+            ]
+          ],
+          "sources": [
+            "hours"
+          ]
+        }
+      }
     },
     {
       "id": "counter",
@@ -350,9 +475,11 @@
       "model": "park",
       "name": "權證遊樂園",
       "tagline": "權證、ETN 與 CBAS",
-      "body": "統一證券發行權證與 ETN（指數投資證券），並經營可轉債資產交換（CBAS），各有獨立的資訊網站。這些商品結構較複雜，有些具槓桿，交易前宜先了解其風險。",
+      "body": "統一證券發行權證與 ETN（指數投資證券），並經營可轉債資產交換（CBAS），各有獨立的資訊網站。ETN 名字和 ETF 很像，但它是證券商發行、有到期日的債券性質商品，不是基金。這些商品結構較複雜，有些具槓桿，交易前宜先了解其風險。",
       "sources": [
-        "stock"
+        "stock",
+        "etnwhat",
+        "etndiff"
       ],
       "items": [
         {
@@ -362,7 +489,7 @@
         },
         {
           "name": "ETN",
-          "desc": "指數投資證券",
+          "desc": "統一證券發行的指數投資證券；有到期日、屬債券性質，不是 ETF",
           "url": "https://promote.pscnet.com.tw/Etn/start"
         },
         {
@@ -465,8 +592,105 @@
       "url": "https://www.pscnet.com.tw/pscnetForeign/index.do"
     },
     {
-      "id": "wealth",
+      "id": "funds",
       "no": "10",
+      "category": "P",
+      "hex": [
+        2,
+        -2
+      ],
+      "model": "orchard",
+      "name": "基金果園",
+      "tagline": "一籃子資產，交給專業經理人",
+      "body": "關係企業統一投信成立於 1992 年 9 月，股東包括統一企業集團與統一證券集團。它發行與管理國內外股票型、固定收益型、多重資產型基金，以及主動式與被動式 ETF。基金可以直接向投信或透過銷售機構申購；ETF 則像股票一樣，用證券戶在交易所買賣。",
+      "sources": [
+        "ezabout",
+        "ezhome"
+      ],
+      "items": [
+        {
+          "name": "統一投信（ezmoney）",
+          "desc": "基金淨值、商品與公告",
+          "url": "https://www.ezmoney.com.tw/"
+        },
+        {
+          "name": "ETF 專區",
+          "desc": "國內外的主動式與被動式 ETF",
+          "url": "https://www.ezmoney.com.tw/ETF"
+        },
+        {
+          "name": "線上開戶",
+          "desc": "開立投信基金帳戶",
+          "url": "https://www.ezmoney.com.tw/signup/index"
+        },
+        {
+          "name": "申購買回流程",
+          "desc": "單筆、定期定額、買回與轉換的步驟",
+          "url": "https://www.ezmoney.com.tw/news/info/4674?tid=5&tmp=1"
+        }
+      ],
+      "details": {
+        "start": {
+          "points": [
+            "向投信直接買基金：先在 ezmoney 線上開戶，再依申購買回流程選擇單筆或定期定額。",
+            "買回或轉換基金也有固定流程，買回價金的付款日依基金不同而不同，官網有一覽表。",
+            "ETF 不用另外開投信帳戶，用證券戶就能在交易所下單，和買股票一樣。"
+          ],
+          "sources": [
+            "ezflow"
+          ]
+        },
+        "caution": {
+          "points": [
+            "基金經主管機關核准，不代表沒有風險；過去績效也不代表未來表現。",
+            "配息不等於報酬：有些基金的配息可能來自本金或收益平準金，會讓原始投資金額減少。",
+            "每檔基金都有 RR1 到 RR5 的風險報酬等級，數字越大風險越高，但它只反映價格波動，涵蓋不了匯率、信用、流動性等所有風險。"
+          ],
+          "sources": [
+            "ezhome"
+          ]
+        },
+        "tip": {
+          "title": "ETF 和 ETN 只差一個字母",
+          "body": "ETF 是投信發行的基金；ETN 是證券商發行、追蹤指數的有價證券，屬債券性質，有到期日。隔壁權證遊樂園裡的 ETN，就是統一證券自己發行的。",
+          "table": [
+            [
+              "項目",
+              "ETN",
+              "ETF"
+            ],
+            [
+              "證券類型",
+              "債券",
+              "基金"
+            ],
+            [
+              "到期日",
+              "有",
+              "無"
+            ],
+            [
+              "追蹤誤差",
+              "有，由發行商承擔",
+              "有，由投資人承擔"
+            ],
+            [
+              "信用交易",
+              "目前不開放",
+              "可融資融券"
+            ]
+          ],
+          "sources": [
+            "etndiff"
+          ]
+        }
+      },
+      "scene": "一片果園，果樹結滿不同顏色的果實，地上排著一籃籃水果，果農在樹間採收。",
+      "url": "https://www.ezmoney.com.tw/"
+    },
+    {
+      "id": "wealth",
+      "no": "11",
       "category": "W",
       "hex": [
         1,
@@ -503,11 +727,45 @@
         }
       ],
       "scene": "有花園的莊園，園丁照顧一排逐年長高的小樹，代表長期累積。",
-      "url": "https://nwmtrade.pscnet.com.tw/PscWM/"
+      "url": "https://nwmtrade.pscnet.com.tw/PscWM/",
+      "details": {
+        "start": {
+          "points": [
+            "定期存股：先線上簽署「定期存股設定條件下單服務申請暨風險預告書」，次一交易日生效後才能約定。",
+            "可以存的標的：上市櫃個股、ETF 與 ETN，但不含槓桿型與反向型。扣款日可以在每月 1–31 日任選。",
+            "樂樂退：先開立財富管理信託戶（每人限一戶），已是證券電子戶的人可以線上加開，再簽署樂樂退契約。",
+            "使用樂樂退前要完成 KYC 風險屬性評估，平台會依結果建議基金組合，比例也可以自己調整。"
+          ],
+          "sources": [
+            "regular",
+            "lele"
+          ]
+        },
+        "caution": {
+          "points": [
+            "定期存股成交後要付手續費。用金額存股時，整股和零股會分成兩筆委託，兩筆都成交就收兩筆手續費。",
+            "零股透過盤中零股委託，沒成交不會保留到盤後零股。",
+            "存 ETN 也要另外簽署「指數投資證券買賣及申購賣回風險預告書」。",
+            "樂樂退的 KYC 風險屬性過期時，會暫停申購。"
+          ],
+          "sources": [
+            "regular",
+            "lele"
+          ]
+        },
+        "tip": {
+          "title": "財富莊園和基金果園有什麼不同？",
+          "body": "財富莊園是「通路」：統一證券的財富管理平台上架多家投信的基金，讓你在同一個地方申購、定期定額與配置。隔壁的基金果園是「產地」：統一投信負責發行與管理自家的基金和 ETF。同一檔統一投信的基金，可能在兩邊都買得到。",
+          "sources": [
+            "wm",
+            "ezabout"
+          ]
+        }
+      }
     },
     {
       "id": "insurance",
-      "no": "11",
+      "no": "12",
       "category": "W",
       "hex": [
         2,
@@ -532,7 +790,7 @@
     },
     {
       "id": "lab",
-      "no": "12",
+      "no": "13",
       "category": "S",
       "hex": [
         2,
@@ -540,17 +798,17 @@
       ],
       "model": "tower",
       "name": "研究塔",
-      "tagline": "投信與投顧的瞭望台",
-      "body": "關係企業包含統一投信（ezmoney）與統一投顧。投顧提供投資早報、新聞評析、總經與 Fed 資訊、訪談與專題報告；投信負責基金與 ETF 的發行與管理。",
+      "tagline": "投顧的瞭望台",
+      "body": "關係企業統一投顧提供投資早報、新聞評析、總經與 Fed 資訊、訪談與專題報告。基金與 ETF 的發行管理，在隔壁的基金果園（統一投信）。",
       "sources": [
         "stock",
         "history"
       ],
       "items": [
         {
-          "name": "統一投信（ezmoney）",
-          "desc": "基金與 ETF",
-          "url": "https://www.ezmoney.com.tw/"
+          "name": "統一投顧",
+          "desc": "投顧首頁與服務項目",
+          "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/index.do"
         },
         {
           "name": "投資早報",
@@ -573,7 +831,7 @@
     },
     {
       "id": "registry",
-      "no": "13",
+      "no": "14",
       "category": "S",
       "hex": [
         0,
@@ -608,7 +866,7 @@
     },
     {
       "id": "forest",
-      "no": "14",
+      "no": "15",
       "category": "C",
       "hex": [
         3,
@@ -731,11 +989,6 @@
       "reason": "資產配置裡加入固定收益"
     },
     {
-      "a": "lab",
-      "b": "wealth",
-      "reason": "投信的基金與 ETF 是長期配置的常見工具"
-    },
-    {
       "a": "wealth",
       "b": "insurance",
       "reason": "規劃好資產，再加一層保障"
@@ -749,6 +1002,26 @@
       "a": "forest",
       "b": "wealth",
       "reason": "永續推動也是財富管理的一部分"
+    },
+    {
+      "a": "funds",
+      "b": "port",
+      "reason": "ETF 用證券戶就能在交易所買賣"
+    },
+    {
+      "a": "funds",
+      "b": "wealth",
+      "reason": "財富管理平台也代銷基金，樂樂退就是用基金組合"
+    },
+    {
+      "a": "funds",
+      "b": "warrant",
+      "reason": "ETF 和 ETN 名字很像，買之前先分清楚"
+    },
+    {
+      "a": "funds",
+      "b": "lab",
+      "reason": "看完研究報告，也可以把選股交給專業經理人"
     }
   ],
   "timeline": [
@@ -775,6 +1048,12 @@
       "title": "一次合併九家專業經紀商",
       "island": "bridge",
       "source": "history"
+    },
+    {
+      "date": "1992-09",
+      "title": "關係企業統一投信成立",
+      "island": "funds",
+      "source": "ezabout"
     },
     {
       "date": "1995-12",
@@ -855,6 +1134,10 @@
     {
       "island": "bond",
       "text": "資產配置裡，慢慢加入一些債券。"
+    },
+    {
+      "island": "funds",
+      "text": "也開始認識基金與 ETF：一籃子資產，交給專業經理人管理。"
     },
     {
       "island": "wealth",

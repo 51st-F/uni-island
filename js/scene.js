@@ -13,7 +13,7 @@ const hexDist = (a, b) => (Math.abs(a[0] - b[0]) + Math.abs(a[0] + a[1] - b[0] -
 
 const ISLAND_H = 0.34;
 const LABEL_Y = { tower: 1.75, lighthouse: 1.2, park: 0.95 };
-const GRASSY = new Set(['forest', 'tower', 'manor', 'river', 'park', 'umbrella', 'bridge']);
+const GRASSY = new Set(['forest', 'tower', 'manor', 'river', 'park', 'umbrella', 'bridge', 'orchard']);
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 

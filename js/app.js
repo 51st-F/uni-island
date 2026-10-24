@@ -5,6 +5,7 @@ const UI = {
   index: 'THE ISLAND INDEX', indexSub: (n, m) => `${n} 座島・${m} 項服務`, pick: '點一格，進入那座島。',
   history: '公司沿革', close: '關閉', checked: '資料查核日期', noWebgl: '你的瀏覽器無法顯示 3D 地圖，先以清單呈現。',
   tourTitle: '一位投資人的一生',
+  begin: '怎麼開始', caution: '注意事項', tip: '小知識',
 };
 const STEP_MS = 6500;
 
@@ -80,6 +81,15 @@ function renderPanel() {
   if (!i) { panel.hidden = true; return; }
   const t = UI, c = cat[i.category];
   const conns = data.edges.filter((e) => e.a === i.id || e.b === i.id).map((e) => ({ other: byId[e.a === i.id ? e.b : e.a], e }));
+  const d = i.details;
+  const sources = [...new Set([...i.sources, ...(d ? Object.values(d).flatMap((x) => x.sources) : [])])];
+  const cite = (ids) => `<p class="cite">${t.sources}：${ids.map((s) => `<a href="${esc(src[s].url)}" target="_blank" rel="noopener">${esc(src[s].title)}</a>`).join('、')}</p>`;
+  const details = !d ? '' : `
+    <section class="detail start"><h3>${t.begin}</h3><ol>${d.start.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ol>${cite(d.start.sources)}</section>
+    <section class="detail caution"><h3>${t.caution}</h3><ul>${d.caution.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>${cite(d.caution.sources)}</section>
+    <section class="detail tip"><h3>${t.tip}</h3><p class="tip-title">${esc(d.tip.title)}</p><p>${esc(d.tip.body)}</p>
+      ${d.tip.table ? `<table>${d.tip.table.map((r, n) => `<tr>${r.map((c) => (n ? `<td>${esc(c)}</td>` : `<th>${esc(c)}</th>`)).join('')}</tr>`).join('')}</table>` : ''}
+      ${cite(d.tip.sources)}</section>`;
   panel.hidden = false;
   panel.style.setProperty('--cat', c.color);
   panel.innerHTML = `
@@ -90,6 +100,7 @@ function renderPanel() {
     </header>
     <p class="tagline">${esc(i.tagline)}</p>
     <p class="body">${esc(i.body)}</p>
+    ${details}
     <h3>${t.services}<span>${i.items.length}</span></h3>
     <ul class="items">${i.items.map((it) => `
       <li>${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">` : '<div>'}
@@ -103,7 +114,7 @@ function renderPanel() {
       </button></li>`).join('')}
     </ul>
     <h3>${t.sources}</h3>
-    <ul class="srcs">${i.sources.map((s) => `<li><a href="${esc(src[s].url)}" target="_blank" rel="noopener">${esc(src[s].title)}</a></li>`).join('')}</ul>
+    <ul class="srcs">${sources.map((s) => `<li><a href="${esc(src[s].url)}" target="_blank" rel="noopener">${esc(src[s].title)}</a></li>`).join('')}</ul>
     <a class="official" href="${esc(i.url)}" target="_blank" rel="noopener">${t.official} ↗</a>`;
   panel.scrollTop = 0;
 }

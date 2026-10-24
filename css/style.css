@@ -127,6 +127,23 @@ body:not([data-view="map"]) .label-layer { display: none; }
 .items i { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-style: normal; color: var(--ink-3); }
 .conns button { border-left: 3px solid var(--cat); }
 .srcs a { font-size: 13px; }
+.detail { margin: 0 0 6px; }
+.detail ol, .detail ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 14px; color: var(--ink-2); }
+.detail ol li::marker { font: 700 12px var(--mono); color: var(--cat); }
+.detail.caution ul { list-style: none; padding: 10px 12px 10px 14px; background: #FFF4EC; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; }
+.detail.caution li { position: relative; padding-left: 16px; }
+.detail.caution li::before { content: '!'; position: absolute; left: 0; font: 700 12px var(--mono); color: var(--accent); }
+.detail.tip { background: var(--paper-2); border-radius: 12px; padding: 2px 14px 10px; }
+.detail.tip h3 { margin-top: 12px; }
+.tip-title { font-weight: 700; margin: 0 0 4px; }
+.detail.tip p { font-size: 14px; color: var(--ink-2); margin: 0 0 8px; }
+.detail.tip .tip-title { color: var(--ink); font-size: 15px; }
+.detail table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 4px 0 8px; background: #fff; border-radius: 8px; overflow: hidden; }
+.detail th, .detail td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+.detail th { font-size: 12px; color: var(--ink-3); font-weight: 700; }
+.detail td:first-child { font-weight: 700; color: var(--ink); }
+.cite { font-size: 12px !important; color: var(--ink-3) !important; margin: 6px 0 0 !important; }
+.cite a { color: var(--ink-3); }
 .official { display: inline-block; margin-top: 18px; font-weight: 700; text-decoration: none; border-bottom: 2px solid currentColor; }
 
 /* list & timeline sheets */
