@@ -11,11 +11,33 @@ export const hexToWorld = (q, r) => new THREE.Vector3(SQ3 * (q + r / 2), 0, 1.5 
 const hexX = (q, r) => q + r / 2;
 const hexDist = (a, b) => (Math.abs(a[0] - b[0]) + Math.abs(a[0] + a[1] - b[0] - b[1]) + Math.abs(a[1] - b[1])) / 2;
 
-const ISLAND_H = 0.34;
+// Islands sit a step above the filler terrain and are a little smaller than a full hex,
+// so a channel of sea shows between them; adjacent islands are joined by bridges.
+const ISLAND_H = 0.46;
+const ISLAND_R = 0.86;
+const MODEL_SCALE = 0.88;
 const LABEL_Y = { tower: 1.75, lighthouse: 1.2, park: 0.95 };
 const GRASSY = new Set(['forest', 'tower', 'manor', 'river', 'park', 'umbrella', 'bridge', 'orchard']);
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+// the island's number printed on the hex face that looks toward the default camera
+function numberPlate(no) {
+  const c = document.createElement('canvas');
+  c.width = 256; c.height = 128;
+  const x = c.getContext('2d');
+  x.fillStyle = '#FFFFFF';
+  x.font = 'bold 84px "JetBrains Mono", "Noto Sans TC", monospace';
+  x.textAlign = 'center'; x.textBaseline = 'middle';
+  x.fillText(no, 128, 70);
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(0.42, 0.21), new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false }));
+  const a = Math.PI / 6, d = ISLAND_R * 0.985 * Math.cos(a) + 0.012;
+  m.position.set(Math.sin(a) * d, ISLAND_H * 0.5, Math.cos(a) * d);
+  m.rotation.y = a;
+  return m;
+}
 
 function hexRing(inner, outer, color) {
   const g = new THREE.RingGeometry(inner, outer, 6, 1, Math.PI / 2);
@@ -23,8 +45,8 @@ function hexRing(inner, outer, color) {
   return new THREE.Mesh(g, new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0, depthWrite: false }));
 }
 
-function tile(h, top, side) {
-  const g = new THREE.CylinderGeometry(0.97, 1.0, h, 6);
+function tile(h, top, side, r = 1) {
+  const g = new THREE.CylinderGeometry(0.97 * r, r, h, 6);
   const m = new THREE.Mesh(g, [mat(side), mat(top), mat(side)]);
   m.position.y = h / 2;
   m.castShadow = true;
@@ -42,8 +64,7 @@ function terrain(islands) {
       const d = hexDist(c, i.hex);
       const k = key(...c);
       if (d === 0 || taken.has(k) || cells.has(k)) continue;
-      const x = hexX(...c);
-      if (d === 1 || (d === 2 && x >= 2)) cells.set(k, c);
+      if (d === 1) cells.set(k, c);
     }
   }
   const out = [];
@@ -104,27 +125,27 @@ export function createWorld(container, data, { onPick, onHover } = {}) {
     const p = hexToWorld(...t.hex);
     const r = rng(Math.floor(t.n * 1e9));
     if (t.type === 'mountain') {
-      const h = 0.5 + t.n * 0.35;
+      const h = 0.32 + t.n * 0.18;
       const m = tile(h, C.grassDark, C.rock);
       m.position.set(p.x, h / 2, p.z);
       world.add(m);
       const peak = new THREE.Group();
-      const ph = 0.7 + r() * 0.7;
-      peak.add(cone(0.75, ph, C.rock, 0, 0, 0, 6), cone(0.28, ph * 0.36, C.snow, 0, ph * 0.64, 0, 6));
-      if (r() > 0.4) peak.add(cone(0.45, ph * 0.6, '#9C978B', 0.45, 0, 0.3, 5));
+      const ph = 0.42 + r() * 0.38;
+      peak.add(cone(0.66, ph, C.rock, 0, 0, 0, 6), cone(0.25, ph * 0.36, C.snow, 0, ph * 0.64, 0, 6));
+      if (r() > 0.4) peak.add(cone(0.4, ph * 0.6, '#9C978B', 0.4, 0, 0.28, 5));
       peak.position.set(p.x, h, p.z);
       peak.rotation.y = r() * 6;
       world.add(peak);
     } else if (t.type === 'beach') {
-      const m = tile(0.16, C.sand, '#D8C8A6');
-      m.position.set(p.x, 0.08, p.z);
+      const m = tile(0.12, C.sand, '#D8C8A6');
+      m.position.set(p.x, 0.06, p.z);
       world.add(m);
     } else {
-      const m = tile(0.28, C.grass, '#C7B48C');
-      m.position.set(p.x, 0.14, p.z);
+      const m = tile(0.2, C.grass, '#C7B48C');
+      m.position.set(p.x, 0.1, p.z);
       world.add(m);
       const n = 1 + Math.floor(r() * 4);
-      for (let i = 0; i < n; i++) { const tr = tree(0.2 + r() * 0.18, p.x + (r() - 0.5) * 1.1, p.z + (r() - 0.5) * 1.1); tr.position.y = 0.28; world.add(tr); }
+      for (let i = 0; i < n; i++) { const tr = tree(0.2 + r() * 0.18, p.x + (r() - 0.5) * 1.1, p.z + (r() - 0.5) * 1.1); tr.position.y = 0.2; world.add(tr); }
     }
   }
 
@@ -136,14 +157,21 @@ export function createWorld(container, data, { onPick, onHover } = {}) {
     const p = hexToWorld(...isl.hex);
     const g = new THREE.Group();
     g.position.copy(p);
-    const t = tile(ISLAND_H, GRASSY.has(isl.model) ? C.grass : '#E6DAC0', catColor[isl.category]);
+    const t = tile(ISLAND_H, GRASSY.has(isl.model) ? C.grass : '#E6DAC0', catColor[isl.category], ISLAND_R);
     t.userData.id = isl.id;
     g.add(t);
+    // category band around the top face, so the five colors read from above too
+    const band = hexRing(ISLAND_R * 0.84, ISLAND_R * 0.97, catColor[isl.category]);
+    band.material.opacity = 1;
+    band.position.y = ISLAND_H + 0.004;
+    g.add(band, numberPlate(isl.no));
     const model = buildModel(isl.model);
     model.group.position.y = ISLAND_H;
+    model.group.scale.setScalar(MODEL_SCALE);
     g.add(model.group);
-    const hoverRing = hexRing(0.9, 1.0, '#FFFFFF');
-    const selRing = hexRing(0.86, 1.04, '#E8601C');
+    // hover and selection halos float just outside the top edge, over the channel
+    const hoverRing = hexRing(ISLAND_R, ISLAND_R + 0.08, '#FFFFFF');
+    const selRing = hexRing(ISLAND_R - 0.02, ISLAND_R + 0.14, '#E8601C');
     hoverRing.position.y = selRing.position.y = ISLAND_H + 0.012;
     g.add(hoverRing, selRing);
 
@@ -164,15 +192,38 @@ export function createWorld(container, data, { onPick, onHover } = {}) {
   }
 
   // investor paths
+  const bridgeLen = SQ3 - 2 * ISLAND_R * 0.97 * Math.cos(Math.PI / 6) + 0.12;
   const edges = data.edges.map((e) => {
     const a = nodes.get(e.a).pos, b = nodes.get(e.b).pos;
+    const history = e.kind === 'history';
+    if (hexDist(nodes.get(e.a).isl.hex, nodes.get(e.b).isl.hex) === 1) {
+      const deck = new THREE.MeshStandardMaterial({ color: C.wood, flatShading: true, roughness: 0.85 });
+      const g = new THREE.Group();
+      const plank = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.03, bridgeLen), deck);
+      plank.position.y = -0.01;
+      plank.castShadow = plank.receiveShadow = true;
+      g.add(plank);
+      for (const s of [-1, 1]) {
+        const rail = new THREE.Mesh(new THREE.BoxGeometry(0.012, 0.012, bridgeLen), mat(history ? '#7A5C9E' : C.woodDark));
+        rail.position.set(s * 0.075, 0.05, 0);
+        g.add(rail);
+        for (const z of [-0.3, 0, 0.3]) {
+          const post = new THREE.Mesh(new THREE.BoxGeometry(0.012, 0.06, 0.012), mat(C.woodDark));
+          post.position.set(s * 0.075, 0.02, z * bridgeLen);
+          g.add(post);
+        }
+      }
+      g.position.copy(a.clone().add(b).multiplyScalar(0.5)).setY(ISLAND_H);
+      g.rotation.y = Math.atan2(b.x - a.x, b.z - a.z);
+      world.add(g);
+      return { e, bridge: g, deck };
+    }
     const d = a.distanceTo(b);
     const mid = a.clone().add(b).multiplyScalar(0.5);
     mid.y = ISLAND_H + 0.5 + d * 0.22;
     const curve = new THREE.QuadraticBezierCurve3(a.clone().setY(ISLAND_H + 0.15), mid, b.clone().setY(ISLAND_H + 0.15));
-    const history = e.kind === 'history';
     const material = new THREE.MeshBasicMaterial({ color: history ? '#7A5C9E' : '#E8601C', transparent: true, opacity: 0.55, depthWrite: false });
-    const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 40, history ? 0.012 : 0.018, 5, false), material);
+    const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 40, 0.012, 5, false), material);
     const dot = new THREE.Mesh(new THREE.IcosahedronGeometry(0.045, 1), new THREE.MeshBasicMaterial({ color: '#FFFFFF', transparent: true }));
     world.add(tube, dot);
     return { e, curve, tube, dot, material, phase: Math.random() };
@@ -234,6 +285,13 @@ export function createWorld(container, data, { onPick, onHover } = {}) {
     });
     edges.forEach((ed) => {
       const on = selected && (ed.e.a === selected || ed.e.b === selected);
+      if (ed.bridge) {
+        const lit = on && edgesOn;
+        ed.deck.color.set(lit ? '#E8601C' : C.wood);
+        ed.deck.emissive.set(lit ? '#E8601C' : '#000000');
+        ed.deck.emissiveIntensity = lit ? 0.35 : 0;
+        return;
+      }
       ed.material.opacity = selected ? (on ? 0.95 : 0.08) : 0.5;
       ed.dot.visible = edgesOn && (!selected || on);
     });
@@ -283,6 +341,7 @@ export function createWorld(container, data, { onPick, onHover } = {}) {
       n.model.update(t);
     });
     edges.forEach((ed) => {
+      if (ed.bridge) return;
       const u = (t * 0.25 + ed.phase) % 2;
       ed.curve.getPoint(u < 1 ? u : 2 - u, ed.dot.position);
     });
@@ -305,7 +364,7 @@ export function createWorld(container, data, { onPick, onHover } = {}) {
     },
     home() { flyTo(center, center.clone().add(homeOffset), 1.4); },
     setLabels(on) { labelRenderer.domElement.classList.toggle('hidden', !on); },
-    setEdges(on) { edgesOn = on; edges.forEach((ed) => { ed.tube.visible = on; }); refreshEmphasis(); },
+    setEdges(on) { edgesOn = on; edges.forEach((ed) => { if (ed.tube) ed.tube.visible = on; }); refreshEmphasis(); },
     setLabelText(fn) { nodes.forEach((n) => { n.el.innerHTML = fn(n.isl); }); },
     setTrail(ids) {
       trailGroup.clear();
