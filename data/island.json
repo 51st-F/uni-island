@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.2",
+  "schemaVersion": "2.3",
   "meta": {
     "slug": "uni-island",
     "title": "統一金融島",
@@ -124,6 +124,211 @@
       "id": "ezhome",
       "title": "統一投信首頁（基金淨值與風險揭露）",
       "url": "https://www.ezmoney.com.tw/"
+    },
+    {
+      "id": "investor",
+      "title": "投資人專區",
+      "url": "https://www.pscnet.com.tw/pscnetAbout/investorArea.do"
+    },
+    {
+      "id": "agm",
+      "title": "股東會資訊",
+      "url": "https://www.pscnet.com.tw/pscnetAbout/menuMain.do?main_id=38c76fac5100000005f667edd9ab95b4&sub_id=38c7728bd3000000906205a7abbd6496"
+    },
+    {
+      "id": "fair",
+      "title": "公平待客專區",
+      "url": "https://webportal.pscnet.com.tw/customerfair/fair.php"
+    },
+    {
+      "id": "pwunlock",
+      "title": "密碼解鎖",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52d3453000000428ae7cf6095053f"
+    },
+    {
+      "id": "sign",
+      "title": "簽署專區",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52e12130000006e04b4f345911083"
+    },
+    {
+      "id": "credit",
+      "title": "授信專區・注意事項",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=67ff2e99bb0000003881f0b4dab6bfca"
+    },
+    {
+      "id": "lendsvc",
+      "title": "借券專區服務",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=38602d14a8000000cc55398be45feec4&sub_id=386031f45d0000009d870bf8d77a7942"
+    },
+    {
+      "id": "margin",
+      "title": "信用交易宣導",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce14fd000000e26c9e7a1902be5b&sub_id=38d156b2370000004aaa8373e3fe2b5e"
+    },
+    {
+      "id": "lendnote",
+      "title": "借券交易須知",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce14fd000000e26c9e7a1902be5b&sub_id=38d15b36680000009399a0045176acbf"
+    },
+    {
+      "id": "loannews",
+      "title": "【重要公告】授信四項業務新版契約（115/4/1 起）",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuContent.do?main_id=38293b49ce0000006514cf96f15aec4b&sub_id=38293b94a4000000a93f8e1df9dc6062&id=6899b15eab000007782a&function_id=02_function_30"
+    },
+    {
+      "id": "warrantsite",
+      "title": "統一權證網",
+      "url": "https://warrant.pscnet.com.tw/j/"
+    },
+    {
+      "id": "etnrule",
+      "title": "ETN 學堂・基本資訊及交易規則",
+      "url": "https://promote.pscnet.com.tw/Etn/school/rule"
+    },
+    {
+      "id": "futopen",
+      "title": "統一期貨・期貨線上開戶流程",
+      "url": "https://www.pfcf.com.tw/info/detail/877"
+    },
+    {
+      "id": "futdocs",
+      "title": "統一期貨・期貨開戶必備文件",
+      "url": "https://www.pfcf.com.tw/info/detail/476"
+    },
+    {
+      "id": "futmargin",
+      "title": "統一期貨・期貨保證金",
+      "url": "https://www.pfcf.com.tw/info/detail/465"
+    },
+    {
+      "id": "futfaq",
+      "title": "統一期貨・與股票之差異",
+      "url": "https://www.pfcf.com.tw/faq/l/55"
+    },
+    {
+      "id": "fdocs",
+      "title": "複委託・開戶所需文件",
+      "url": "https://www.pscnet.com.tw/pscnetForeign/menuMain.do?main_id=38cd9308be00000010ac1ab073db8370"
+    },
+    {
+      "id": "fflow",
+      "title": "複委託・開戶流程",
+      "url": "https://www.pscnet.com.tw/pscnetForeign/menuMain.do?main_id=38cd92e69100000036431d46b4720912"
+    },
+    {
+      "id": "frule",
+      "title": "複委託・市場規則",
+      "url": "https://www.pscnet.com.tw/pscnetForeign/menuMain.do?main_id=38cd921015000000a28a8f40a8e0c5ab"
+    },
+    {
+      "id": "fhours",
+      "title": "複委託・交易時間",
+      "url": "https://www.pscnet.com.tw/pscnetForeign/menuMain.do?main_id=38cd922dba000000753c80e4e57d6801"
+    },
+    {
+      "id": "fnotice",
+      "title": "外國證券交易須知",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=3804ce14fd000000e26c9e7a1902be5b&sub_id=38d15f0915000000fa199e721a3e2c5a"
+    },
+    {
+      "id": "bntd",
+      "title": "債券・台幣債券",
+      "url": "https://www.pscnet.com.tw/pscnetBond/menuContent.do?main_id=38ccd126870000001487c43695c111ac&sub_id=391463aa4c0000006b2737ce4f70bcb4"
+    },
+    {
+      "id": "bfx",
+      "title": "債券・外幣債券",
+      "url": "https://www.pscnet.com.tw/pscnetBond/menuContent.do?main_id=38ccd102b1000000d39bbd65cc40a087&sub_id=3914b85462000000380408ae1b2b3cd3"
+    },
+    {
+      "id": "brepo",
+      "title": "債券・附條件交易",
+      "url": "https://www.pscnet.com.tw/pscnetBond/menuContent.do?main_id=38ccd0d836000000f871040930e61b67&sub_id=3914ba0794000000b64623f295c19137"
+    },
+    {
+      "id": "bstruct",
+      "title": "債券・結構型商品",
+      "url": "https://www.pscnet.com.tw/pscnetBond/menuContent.do?main_id=38cccd8e4300000016775a2f9ad1c414&sub_id=3914b98c5600000047b7993d9d806a07"
+    },
+    {
+      "id": "ins",
+      "title": "統一保代首頁",
+      "url": "https://insurance.pscnet.com.tw/ia/"
+    },
+    {
+      "id": "insbook",
+      "title": "統一保代・預約投保",
+      "url": "https://insurance.pscnet.com.tw/ia/menu-3-6.html"
+    },
+    {
+      "id": "insexcl",
+      "title": "統一保代・瞭解除外不保事項",
+      "url": "https://insurance.pscnet.com.tw/ia/menu4-3-1.html"
+    },
+    {
+      "id": "inspay",
+      "title": "統一保代・繳納保險費有困難時",
+      "url": "https://insurance.pscnet.com.tw/ia/menu4-3-2.html"
+    },
+    {
+      "id": "insfaq",
+      "title": "統一保代・理賠常見問題",
+      "url": "https://insurance.pscnet.com.tw/ia/claim2.html"
+    },
+    {
+      "id": "insdocs",
+      "title": "統一保代・理賠應備文件",
+      "url": "https://insurance.pscnet.com.tw/ia/claim3.html"
+    },
+    {
+      "id": "advisor",
+      "title": "統一投顧首頁",
+      "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/index.do"
+    },
+    {
+      "id": "advintro",
+      "title": "投顧簡介",
+      "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=39914830200000005f3cbef39a66371d&sub_id=3991488701000000eb4df134007c7e3d"
+    },
+    {
+      "id": "advjoin",
+      "title": "投顧・我想加入會員",
+      "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=38cd9f154e000000c0b98c2220e8a535"
+    },
+    {
+      "id": "advdisc",
+      "title": "投顧・免責聲明",
+      "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=38cd9eda80000000634e4b7d5e626f35"
+    },
+    {
+      "id": "stintro",
+      "title": "統一股務代理首頁",
+      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/index.do"
+    },
+    {
+      "id": "transfer",
+      "title": "股務・股票過戶",
+      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuList.do?main_id=38ccec1ab60000000162609d4e3f9caa&sub_id=393d2fcf400000008b94342fdb580aab"
+    },
+    {
+      "id": "dividend",
+      "title": "股務・股利領取",
+      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuList.do?main_id=38ccea0f0c0000006598da5228fe836f&sub_id=393d31775c0000001c49094092f19e0e"
+    },
+    {
+      "id": "lost",
+      "title": "股務・股票掛失",
+      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuList.do?main_id=38cceac2ab0000005c15e5d2c1d88dab&sub_id=393d30cf32000000d73b362021f5f53a"
+    },
+    {
+      "id": "seal",
+      "title": "股務・留存印鑑變更",
+      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuList.do?main_id=38ccea6269000000ea95c871526d6eb7&sub_id=393d3117270000001a87d54896651707"
+    },
+    {
+      "id": "fraud",
+      "title": "反詐騙宣導專區",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuContent.do?main_id=49605e76ed000000617c1b49652b3167&sub_id=49605fc75f000000d5b7e04ef03bb5ed&id=4960a360c000000037b624c757559961&function_id="
     }
   ],
   "categories": [
@@ -184,7 +389,37 @@
         }
       ],
       "scene": "木造碼頭上停著一艘掛著橘色旗幟的帆船，岸邊幾間倉庫，碼頭工人搬運貨箱。",
-      "url": "https://www.pscnet.com.tw/pscnetAbout/about.do"
+      "url": "https://www.pscnet.com.tw/pscnetAbout/about.do",
+      "details": {
+        "start": {
+          "points": [
+            "想認識這家公司，可以從「投資人專區」開始：股權結構、年報、法人說明會與重大訊息都在這裡。",
+            "股東會的通知書、議事手冊、議事錄與影音檔，放在股東會資訊頁。2026 年的股東會在 5 月 27 日召開。",
+            "董事會、功能性委員會等公司治理資料，在投資人專區的「公司治理」分類。"
+          ],
+          "sources": [
+            "investor",
+            "agm"
+          ]
+        },
+        "caution": {
+          "points": [
+            "本站是非官方整理。公司正式的財務資料與重大訊息，請以投資人專區與公開資訊觀測站為準。",
+            "股東可以用書面或電子方式行使股東會表決權，方法寫在每年的股東會通知書裡。"
+          ],
+          "sources": [
+            "investor",
+            "agm"
+          ]
+        },
+        "tip": {
+          "title": "三好一公道",
+          "body": "統一證券傳承統一企業「三好一公道」的企業精神，本著「有所為，有所不為」的企業良知，以「誠信服務，永續經營」為經營理念。",
+          "sources": [
+            "fair"
+          ]
+        }
+      }
     },
     {
       "id": "counter",
@@ -242,7 +477,64 @@
         }
       ],
       "scene": "一棟玻璃小屋，裡面一排自助服務機，門口有小人排隊拿著手機。",
-      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52ce157000000b0001b6014e5e5a5"
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52ce157000000b0001b6014e5e5a5",
+      "details": {
+        "start": {
+          "points": [
+            "忘記密碼或被鎖住：到密碼解鎖頁輸入身分證字號與西元出生年月日（8 碼），就能線上解鎖。",
+            "要簽風險預告書或契約：到簽署專區，用電腦或 e指發 App 線上簽署。",
+            "已經有證券戶的人，想加開信用、借券等業務，也能在 e 櫃台線上申請。"
+          ],
+          "sources": [
+            "pwunlock",
+            "sign",
+            "open"
+          ]
+        },
+        "caution": {
+          "points": [
+            "密碼解鎖每天有次數限制，超過要隔天再申請，或請營業員、客服中心協助。",
+            "線上開戶或加開業務，電腦與手機（e指發）都必須有有效的電子憑證。",
+            "線上新開證券戶需為本國成年自然人；借券線上開戶要年滿 20 歲。"
+          ],
+          "sources": [
+            "pwunlock",
+            "open"
+          ]
+        },
+        "tip": {
+          "title": "e 櫃台能辦的事，分別在哪裡辦",
+          "body": "大部分事情都有電腦與手機兩條路，手機版集中在 e指發 App。",
+          "sources": [
+            "open",
+            "pwunlock",
+            "sign",
+            "cert"
+          ],
+          "table": [
+            [
+              "事項",
+              "管道"
+            ],
+            [
+              "線上開戶",
+              "電腦、e指發"
+            ],
+            [
+              "密碼解鎖",
+              "網頁輸入身分證字號與生日"
+            ],
+            [
+              "文件簽署",
+              "簽署專區（電腦、e指發、憑證e總管）"
+            ],
+            [
+              "申請憑證",
+              "憑證e總管、電子憑證中心、e指發"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "bridge",
@@ -277,7 +569,61 @@
         }
       ],
       "scene": "一座拱橋連接九個小平台，每個平台上有一間小分行，人潮從各平台匯流過橋。",
-      "url": "https://www.pscnet.com.tw/pscnetAbout/menuMain.do?main_id=38c7668e6b000000275f998172aeafe5&sub_id=3939b43d100000000a3a3a4ea0c0dd7d"
+      "url": "https://www.pscnet.com.tw/pscnetAbout/menuMain.do?main_id=38c7668e6b000000275f998172aeafe5&sub_id=3939b43d100000000a3a3a4ea0c0dd7d",
+      "details": {
+        "start": {
+          "points": [
+            "營業據點頁列出總公司、各分公司與期貨據點的地址，可以找離你最近的一家。",
+            "臨櫃開戶要本人攜帶身分證正本、附照片的第二證件正本與印章。",
+            "服務據點的營業時間是 8:00–16:30；客服中心則是交易日 8:00–20:00。"
+          ],
+          "sources": [
+            "branches",
+            "open",
+            "newbie",
+            "fair"
+          ]
+        },
+        "caution": {
+          "points": [
+            "複委託開戶目前要本人親自到分公司臨櫃辦理。",
+            "網路下單遇到斷線或系統異常時，可以改由營業員代為委託。"
+          ],
+          "sources": [
+            "fflow",
+            "estmt"
+          ]
+        },
+        "tip": {
+          "title": "32 個證券據點分布在哪裡",
+          "body": "依官網營業據點表的地址統計，總公司加分公司共 32 處，另有台北、台中、台南、高雄 4 處期貨據點。",
+          "sources": [
+            "branches"
+          ],
+          "table": [
+            [
+              "縣市",
+              "據點數"
+            ],
+            [
+              "台北市",
+              "9（含總公司）"
+            ],
+            [
+              "新北市、桃園市",
+              "各 4"
+            ],
+            [
+              "台中市、台南市、高雄市、彰化縣",
+              "各 2"
+            ],
+            [
+              "基隆、宜蘭、新竹、苗栗、嘉義、屏東、金門",
+              "各 1"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "port",
@@ -434,7 +780,38 @@
         }
       ],
       "scene": "高塔頂端有望遠鏡與天線，塔內書架堆滿報告，窗邊有研究員在看圖表。",
-      "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/index.do"
+      "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/index.do",
+      "details": {
+        "start": {
+          "points": [
+            "投資早報、新聞評析、總經與 Fed 資訊，都可以在投顧網站上瀏覽。",
+            "研究報告分成訪談報告、投資速報、專題報告與月刊週報。",
+            "想成為會員，可以用電腦或 e指發 線上簽署。"
+          ],
+          "sources": [
+            "advisor",
+            "advjoin"
+          ]
+        },
+        "caution": {
+          "points": [
+            "研究報告只供一般投資參考，不是針對特定對象的投資建議，也不構成買賣有價證券的要約。",
+            "報告依特定日期的判斷撰寫，不保證完整正確；意見變更時不另行通知。",
+            "投資前應評估是否適合自己的財務狀況，必要時諮詢財務顧問。"
+          ],
+          "sources": [
+            "advdisc"
+          ]
+        },
+        "tip": {
+          "title": "投顧和投信差在哪？",
+          "body": "統一投顧在 1997 年（民國 86 年）成立，是統一證券百分之百轉投資的公司，主要業務是證券投資顧問與全權委託投資。統一投信則負責發行與管理基金和 ETF，也就是 12 號基金果園。",
+          "sources": [
+            "advintro",
+            "ezabout"
+          ]
+        }
+      }
     },
     {
       "id": "registry",
@@ -469,7 +846,39 @@
         }
       ],
       "scene": "古典郵局造型建築，郵差把信件送往各家公司的信箱。",
-      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/index.do"
+      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/index.do",
+      "details": {
+        "start": {
+          "points": [
+            "股票過戶分成繼承、贈與、私人間受讓等情況，每種要準備的文件不同，官網有逐項清單與表單下載。",
+            "要變更股利匯款的銀行帳號或集保帳號，填寫維護申請書並附上存摺影本。",
+            "代理公司的股東會、除權除息與現增減資資訊，都可以在股務代理網站查詢。"
+          ],
+          "sources": [
+            "transfer",
+            "dividend",
+            "stintro"
+          ]
+        },
+        "caution": {
+          "points": [
+            "實體股票遺失：辦理掛失後 5 日內，要向地方法院聲請公示催告，之後憑法院的除權判決才能申請補發。",
+            "新印鑑或簽名式登記後，除非聲明當日生效，一般在次日生效。",
+            "未成年股東的印鑑卡，要加蓋法定代理人父母雙方印鑑；只想留存單方印鑑的，要另填同意書。"
+          ],
+          "sources": [
+            "lost",
+            "seal"
+          ]
+        },
+        "tip": {
+          "title": "有實體、沒實體，文件不一樣",
+          "body": "許多公司已經全面無實體化，股票存在集保帳戶裡。辦理繼承或贈與過戶時，無實體股票要填 (671)(673) 申請書並附集保存摺封面影本；仍有實體股票的，則要附上股票本身與股票轉讓過戶申請書。",
+          "sources": [
+            "transfer"
+          ]
+        }
+      }
     },
     {
       "id": "loan",
@@ -509,7 +918,39 @@
         }
       ],
       "scene": "一排連棟小屋，屋頂掛著天秤，一側有大型保險箱。",
-      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=67ff2e99bb0000003881f0b4dab6bfca"
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=67ff2e99bb0000003881f0b4dab6bfca",
+      "details": {
+        "start": {
+          "points": [
+            "信用交易（融資融券）可以線上開戶：證券戶滿 3 個月、年滿 20 歲的本國國民，且近 1 年股票成交達 10 筆以上、成交金額 25 萬元以上（不含興櫃）。",
+            "借券：電腦用戶可以線上開戶與約定出借；手機在 e指發 的借券專區點「借券開戶」或「借券申請」。",
+            "線上申請都需要有效的電子憑證。"
+          ],
+          "sources": [
+            "credit",
+            "lendsvc"
+          ]
+        },
+        "caution": {
+          "points": [
+            "融資融券的整戶擔保維持率低於 130% 時會收到補繳通知；如果沒補足，之後又低於 130%，擔保品可能被處分，甚至構成違約。",
+            "2026 年 4 月 1 日起簽新版授信契約，不限用途款項借貸的期限為 6 個月，到期可以申請展延；舊約未到期的仍適用 18 個月。",
+            "要賣出借券股票，不能用網路下單，要找營業員辦理。"
+          ],
+          "sources": [
+            "margin",
+            "loannews",
+            "lendnote"
+          ]
+        },
+        "tip": {
+          "title": "授信四合一",
+          "body": "新版授信契約（11503 版）把四項授信業務放在同一份契約：信用交易、有價證券借貸、不限用途款項借貸、借貸款項。線上授信開戶、續約與調整額度，都使用這份契約。",
+          "sources": [
+            "loannews"
+          ]
+        }
+      }
     },
     {
       "id": "warrant",
@@ -546,7 +987,61 @@
         }
       ],
       "scene": "小型遊樂園：雲霄飛車、旋轉木馬與摩天輪，每節車廂顏色不同。",
-      "url": "https://warrant.pscnet.com.tw/j/"
+      "url": "https://warrant.pscnet.com.tw/j/",
+      "details": {
+        "start": {
+          "points": [
+            "權證：統一權證網提供權證搜尋、委買價試算與履約試算，可以先查條件再下單。",
+            "ETN：直接在證券市場買賣；已有證券戶的人，要先簽署風險預告書才能交易。",
+            "CBAS（可轉債資產交換）有獨立的資訊網。"
+          ],
+          "sources": [
+            "warrantsite",
+            "etnwhat"
+          ]
+        },
+        "caution": {
+          "points": [
+            "ETN 有到期日：到期時依最後交易日盤後公布的指標價值計算償還金額；最後交易日是到期日前兩個營業日。",
+            "ETN 不能當沖、信用交易、借券或零股交易。",
+            "權證價格會受剩餘交易天數影響。例如新增國定假日讓剩餘天數減少時，價格可能跟著變動。"
+          ],
+          "sources": [
+            "etnwhat",
+            "etnrule",
+            "warrantsite"
+          ]
+        },
+        "tip": {
+          "title": "看代號認 ETN",
+          "body": "ETN 的證券代號都是 02 開頭，最後一碼還能看出類型。追蹤國外指數的 ETN 沒有漲跌幅限制，追蹤國內指數的是 10%（槓桿與反向型再乘上倍數）。",
+          "sources": [
+            "etnrule"
+          ],
+          "table": [
+            [
+              "代號",
+              "類型"
+            ],
+            [
+              "02XXXX",
+              "國內、國外 ETN"
+            ],
+            [
+              "02XXXL",
+              "槓桿 ETN"
+            ],
+            [
+              "02XXXR",
+              "反向 ETN"
+            ],
+            [
+              "02XXXB",
+              "債券 ETN"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "futures",
@@ -575,7 +1070,67 @@
         }
       ],
       "scene": "海岬上的燈塔，燈光掃過海面，塔身刻著時間刻度。",
-      "url": "https://www.pfcf.com.tw/"
+      "url": "https://www.pfcf.com.tw/",
+      "details": {
+        "start": {
+          "points": [
+            "線上開戶七步驟：填寫資料 → 上傳證件 → 視訊認證 → 申請憑證 → 簽署文件 → 約定出入金銀行存摺 → 確認合約。",
+            "臨櫃開戶：年滿 20 歲、有行為能力的中華民國國民，帶第一證件、第二證件（健保卡、護照、駕照或戶口名簿）、印章，以及本人名義的出入金存摺。",
+            "開戶後會有一個保證金帳戶，匯入足夠的錢就可以交易。"
+          ],
+          "sources": [
+            "futopen",
+            "futdocs",
+            "futmargin"
+          ]
+        },
+        "caution": {
+          "points": [
+            "自 2022 年 4 月 11 日起，新開戶交易人都要填寫「期貨交易知識認知表」。",
+            "下單前要有足夠的原始保證金；持有部位後如果低於維持保證金，會被追繳，甚至被強制平倉。",
+            "每一種期貨契約都有到期日，不能像股票一樣長期持有。"
+          ],
+          "sources": [
+            "stock",
+            "futmargin",
+            "futfaq"
+          ]
+        },
+        "tip": {
+          "title": "期貨和股票哪裡不一樣",
+          "body": "期貨是標準化的契約，以「口」為單位。以台股指數期貨為例，每口契約價值是加權股價指數乘以新台幣 200 元。",
+          "sources": [
+            "futfaq"
+          ],
+          "table": [
+            [
+              "項目",
+              "股票",
+              "期貨"
+            ],
+            [
+              "交易單位",
+              "一張 1,000 股",
+              "一口契約"
+            ],
+            [
+              "常見目的",
+              "籌資、投資、投機",
+              "避險、套利、投機"
+            ],
+            [
+              "股利",
+              "有",
+              "股價指數期貨沒有"
+            ],
+            [
+              "到期日",
+              "無",
+              "有"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "global",
@@ -620,7 +1175,60 @@
         }
       ],
       "scene": "小型機場航廈，跑道上有飛機起降，出發看板顯示紐約、香港、上海、東京。",
-      "url": "https://www.pscnet.com.tw/pscnetForeign/index.do"
+      "url": "https://www.pscnet.com.tw/pscnetForeign/index.do",
+      "details": {
+        "start": {
+          "points": [
+            "先到合作銀行（中國信託、國泰世華或台新）開立交割帳戶，外幣或台幣擇一即可。",
+            "本人帶文件到統一證券分公司臨櫃，填寫「受託買賣外國有價證券開戶契約書」，兩天內會以電子郵件通知開戶完成。",
+            "下單前要先把足額款項存入交割帳戶。外幣交割要存交易市場的幣別：美股美金、港股港幣、滬深股通人民幣、日股日幣。"
+          ],
+          "sources": [
+            "fflow"
+          ]
+        },
+        "caution": {
+          "points": [
+            "槓桿型或反向型 ETF 要另外符合條件（例如已開立國內信用交易帳戶，或近一年權證、期貨成交 10 筆以上），並簽署風險預告書。",
+            "依主管機關規範，非專業投資人不能投資滬深股通。",
+            "海外市場有暫停交易機制，也要留意當地國家主權評等的變化；成交回報與每月對帳單要仔細核對。"
+          ],
+          "sources": [
+            "fdocs",
+            "frule",
+            "fnotice"
+          ]
+        },
+        "tip": {
+          "title": "用台灣時間看海外市場",
+          "body": "下表是台灣時間的盤中交易時段。四個市場的委託都不能改量，只能刪單重下。",
+          "sources": [
+            "fhours"
+          ],
+          "table": [
+            [
+              "市場",
+              "台灣時間"
+            ],
+            [
+              "美股",
+              "夏令 21:30–隔日 04:00；冬令 22:30–隔日 05:00"
+            ],
+            [
+              "港股",
+              "09:30–12:00、13:00–16:10"
+            ],
+            [
+              "滬深股通",
+              "09:30–11:30、13:00–15:00"
+            ],
+            [
+              "日股",
+              "08:00–10:30、11:30–14:30"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "bond",
@@ -665,7 +1273,62 @@
         }
       ],
       "scene": "一條緩流的河，河上有平底船載著卷軸，河岸設有水閘門。",
-      "url": "https://www.pscnet.com.tw/pscnetBond/index.do"
+      "url": "https://www.pscnet.com.tw/pscnetBond/index.do",
+      "details": {
+        "start": {
+          "points": [
+            "附條件交易：和證券自營商約定，一方先賣出債券、到期再依約定金額買回，承作期間最短 1 天、最長 1 年。",
+            "外國債券：非專業投資人可以承作附條件交易，但標的要符合信評等條件；買賣斷交易限專業投資人。",
+            "海外債可以臨櫃、傳真或電話錄音委託（當地時間 10:00–16:00），也可以用 App（10:00–15:00）。"
+          ],
+          "sources": [
+            "brepo",
+            "bfx",
+            "fhours"
+          ]
+        },
+        "caution": {
+          "points": [
+            "債券價格和市場利率反向：利率走高時，債券價格下跌。",
+            "附條件交易的買方不承擔債券價格波動，但如果賣方違約，買方要承擔損失，所以要慎選交易對手。",
+            "結構型商品的風險包括銷售機構違約、市場價格風險與流動性限制。"
+          ],
+          "sources": [
+            "bntd",
+            "brepo",
+            "bstruct"
+          ]
+        },
+        "tip": {
+          "title": "台幣債券有哪幾種",
+          "body": "依發行者不同，台幣債券主要分成四種，債信也跟著發行者而不同。",
+          "sources": [
+            "bntd"
+          ],
+          "table": [
+            [
+              "種類",
+              "發行者與特色"
+            ],
+            [
+              "政府公債",
+              "各級政府發行，流動性最佳、信用風險最低"
+            ],
+            [
+              "普通公司債",
+              "公民營機構發行，債信因公司而異"
+            ],
+            [
+              "金融債券",
+              "銀行發行"
+            ],
+            [
+              "轉換公司債",
+              "公司發行，可依條件轉換成股票"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "funds",
@@ -862,7 +1525,61 @@
         }
       ],
       "scene": "一間有大雨傘造型屋頂的小屋，雨滴落在傘外。",
-      "url": "https://insurance.pscnet.com.tw/ia/"
+      "url": "https://insurance.pscnet.com.tw/ia/",
+      "details": {
+        "start": {
+          "points": [
+            "商品分成壽險、產險與企業保險，可以在保代網站的商品櫥窗查看。",
+            "想當面了解，可以線上預約投保，不用排隊等候。",
+            "營業時間是非例假日 08:00–17:00。"
+          ],
+          "sources": [
+            "ins",
+            "insbook"
+          ]
+        },
+        "caution": {
+          "points": [
+            "保單都有除外不保事項，例如要保人或被保險人的故意行為、酒駕超過法定標準等，投保前要看清楚條款。",
+            "繳費有困難時，可以考慮展期定期保險、減額繳清保險或減少保險金額，但保障內容會跟著改變。",
+            "被保險人未滿 18 歲時，醫療保險金一般可以給付到法定代理人帳戶，實際依各保險公司規定。"
+          ],
+          "sources": [
+            "insexcl",
+            "inspay",
+            "insfaq"
+          ]
+        },
+        "tip": {
+          "title": "申請理賠要準備什麼",
+          "body": "不同險種要準備的文件不同，以下是官網列出的基本文件。",
+          "sources": [
+            "insdocs"
+          ],
+          "table": [
+            [
+              "險種",
+              "應備文件"
+            ],
+            [
+              "醫療、健康、傷害險",
+              "理賠申請書、診斷證明書、醫療收據、個資同意書"
+            ],
+            [
+              "汽機車保險",
+              "理賠申請書、警方處理證明、行照與駕照影本、個資同意書、和解書或判決書"
+            ],
+            [
+              "旅遊不便險",
+              "理賠申請書、交通業者出具的延誤證明"
+            ],
+            [
+              "住宅火災保險",
+              "理賠申請書、火災證明書、個資同意書、身分證明、損失清單"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "forest",
@@ -908,7 +1625,39 @@
         }
       ],
       "scene": "一片森林，中央有一棵大樹，樹下有小人辦座談會，林間掛著盾牌形狀的反詐騙告示牌。",
-      "url": "https://www.pscnet.com.tw/pscnetAbout/csrArea.do"
+      "url": "https://www.pscnet.com.tw/pscnetAbout/csrArea.do",
+      "details": {
+        "start": {
+          "points": [
+            "遇到可疑電話或不明訊息，撥 165 反詐騙專線，或打統一證券反詐騙專線 02-8172-4668（8:00–20:00）。",
+            "有意見或申訴，可以透過服務專線、網路電話或服務信箱反映，申訴案件會通知權責單位主管調查處理。",
+            "永續報告書與 TCFD 報告書，都可以在企業永續發展專區下載。"
+          ],
+          "sources": [
+            "fraud",
+            "fair",
+            "investor"
+          ]
+        },
+        "caution": {
+          "points": [
+            "統一證券不會用簡訊或通訊軟體向投資人推介。",
+            "不少詐騙以高報酬為誘餌，看到標榜高報酬的投資邀約要提高警覺。",
+            "可以到公開資訊觀測站的「反詐騙聯防行動專區」、證券商同業公會的「反金融詐騙專區」查證。"
+          ],
+          "sources": [
+            "fraud",
+            "fair"
+          ]
+        },
+        "tip": {
+          "title": "打詐專責單位",
+          "body": "統一證券自 2025 年 12 月 31 日起成立「打詐專責單位」，負責制定反詐政策、辦理員工防詐訓練、推動客戶防詐宣導與關懷、即時處理偽冒與詐騙事件，並每月把詐騙案例統計上傳公開資訊觀測站。",
+          "sources": [
+            "fraud"
+          ]
+        }
+      }
     }
   ],
   "edges": [
