@@ -187,8 +187,66 @@
       "url": "https://www.pscnet.com.tw/pscnetAbout/about.do"
     },
     {
-      "id": "bridge",
+      "id": "counter",
       "no": "02",
+      "category": "S",
+      "hex": [
+        0,
+        -1
+      ],
+      "model": "kiosk",
+      "name": "e 櫃台",
+      "tagline": "不用出門也能辦好的事",
+      "body": "線上開戶、密碼解鎖、文件簽署、憑證申請都能在網路上完成。另有日電子帳單、統e分戶帳、KYC 風險評估與定期審查，以及結合 OPENPOINT 點數的統e好康+。",
+      "sources": [
+        "stock"
+      ],
+      "items": [
+        {
+          "name": "線上開戶",
+          "desc": "用手機或電腦完成開戶",
+          "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52ce157000000b0001b6014e5e5a5"
+        },
+        {
+          "name": "密碼解鎖",
+          "desc": "線上處理密碼鎖定",
+          "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52d3453000000428ae7cf6095053f"
+        },
+        {
+          "name": "簽署專區",
+          "desc": "線上簽署各類文件",
+          "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52e12130000006e04b4f345911083"
+        },
+        {
+          "name": "憑證專區",
+          "desc": "申請與管理下單憑證",
+          "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52e170a000000eb1bfba32854efea"
+        },
+        {
+          "name": "日電子帳單",
+          "desc": "申請每日電子對帳單"
+        },
+        {
+          "name": "統e分戶帳",
+          "desc": "分戶帳服務"
+        },
+        {
+          "name": "KYC 風險評估",
+          "desc": "定期審查與風險屬性評估",
+          "url": "https://kyc.pscnet.com.tw/KYC/kyc00.php"
+        },
+        {
+          "name": "統e好康+",
+          "desc": "結合 OPENPOINT 點數",
+          "url": "https://webportal.pscnet.com.tw/openpoint"
+        }
+      ],
+      "scene": "一棟玻璃小屋，裡面一排自助服務機，門口有小人排隊拿著手機。",
+      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52ce157000000b0001b6014e5e5a5"
+    },
+    {
+      "id": "bridge",
+      "no": "03",
       "category": "C",
       "hex": [
         -1,
@@ -223,7 +281,7 @@
     },
     {
       "id": "port",
-      "no": "03",
+      "no": "04",
       "category": "T",
       "hex": [
         0,
@@ -338,66 +396,84 @@
       }
     },
     {
-      "id": "counter",
-      "no": "04",
+      "id": "lab",
+      "no": "05",
+      "category": "S",
+      "hex": [
+        2,
+        -1
+      ],
+      "model": "tower",
+      "name": "研究塔",
+      "tagline": "投顧的瞭望台",
+      "body": "關係企業統一投顧提供投資早報、新聞評析、總經與 Fed 資訊、訪談與專題報告。基金與 ETF 的發行管理，在隔壁的基金果園（統一投信）。",
+      "sources": [
+        "stock",
+        "history"
+      ],
+      "items": [
+        {
+          "name": "統一投顧",
+          "desc": "投顧首頁與服務項目",
+          "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/index.do"
+        },
+        {
+          "name": "投資早報",
+          "desc": "每日盤前資訊",
+          "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=39a45d4c1c000000e1923552a1b93e0b"
+        },
+        {
+          "name": "Fed 資訊",
+          "desc": "總經與聯準會動態",
+          "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=4c8e7697c5000000a9a7a7c34938c36a"
+        },
+        {
+          "name": "專題報告",
+          "desc": "產業與主題研究",
+          "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=39a55141fe000000b2b9ecbfbf4c803c"
+        }
+      ],
+      "scene": "高塔頂端有望遠鏡與天線，塔內書架堆滿報告，窗邊有研究員在看圖表。",
+      "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/index.do"
+    },
+    {
+      "id": "registry",
+      "no": "06",
       "category": "S",
       "hex": [
         0,
-        -1
+        -2
       ],
-      "model": "kiosk",
-      "name": "e 櫃台",
-      "tagline": "不用出門也能辦好的事",
-      "body": "線上開戶、密碼解鎖、文件簽署、憑證申請都能在網路上完成。另有日電子帳單、統e分戶帳、KYC 風險評估與定期審查，以及結合 OPENPOINT 點數的統e好康+。",
+      "model": "postoffice",
+      "name": "股務代理所",
+      "tagline": "幫上市櫃公司照顧股東",
+      "body": "股務代理部門替上市、上櫃、興櫃及未上市櫃公司處理股東事務，包括股票過戶、質權異動、掛失、印鑑變更、股利領取，以及股東會與除權息資訊。",
       "sources": [
         "stock"
       ],
       "items": [
         {
-          "name": "線上開戶",
-          "desc": "用手機或電腦完成開戶",
-          "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52ce157000000b0001b6014e5e5a5"
+          "name": "股票過戶",
+          "desc": "過戶與質權異動",
+          "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuMain.do?main_id=38ccec1ab60000000162609d4e3f9caa"
         },
         {
-          "name": "密碼解鎖",
-          "desc": "線上處理密碼鎖定",
-          "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52d3453000000428ae7cf6095053f"
+          "name": "股利領取",
+          "desc": "股利發放與領取",
+          "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuMain.do?main_id=38ccea0f0c0000006598da5228fe836f"
         },
         {
-          "name": "簽署專區",
-          "desc": "線上簽署各類文件",
-          "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52e12130000006e04b4f345911083"
-        },
-        {
-          "name": "憑證專區",
-          "desc": "申請與管理下單憑證",
-          "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52e170a000000eb1bfba32854efea"
-        },
-        {
-          "name": "日電子帳單",
-          "desc": "申請每日電子對帳單"
-        },
-        {
-          "name": "統e分戶帳",
-          "desc": "分戶帳服務"
-        },
-        {
-          "name": "KYC 風險評估",
-          "desc": "定期審查與風險屬性評估",
-          "url": "https://kyc.pscnet.com.tw/KYC/kyc00.php"
-        },
-        {
-          "name": "統e好康+",
-          "desc": "結合 OPENPOINT 點數",
-          "url": "https://webportal.pscnet.com.tw/openpoint"
+          "name": "其他股務作業",
+          "desc": "掛失、印鑑變更等",
+          "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuMain.do?main_id=38cce9df84000000139e811d42f011de"
         }
       ],
-      "scene": "一棟玻璃小屋，裡面一排自助服務機，門口有小人排隊拿著手機。",
-      "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=39b52ce157000000b0001b6014e5e5a5"
+      "scene": "古典郵局造型建築，郵差把信件送往各家公司的信箱。",
+      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/index.do"
     },
     {
       "id": "loan",
-      "no": "05",
+      "no": "07",
       "category": "S",
       "hex": [
         -1,
@@ -436,37 +512,8 @@
       "url": "https://www.pscnet.com.tw/pscnetStock/menuMain.do?main_id=67ff2e99bb0000003881f0b4dab6bfca"
     },
     {
-      "id": "futures",
-      "no": "06",
-      "category": "P",
-      "hex": [
-        1,
-        -2
-      ],
-      "model": "lighthouse",
-      "name": "期貨燈塔",
-      "tagline": "看向更遠的價格",
-      "body": "期貨與選擇權由關係企業統一期貨提供服務。期貨具高槓桿特性，自 2022 年 4 月 11 日起，新開戶交易人須填寫「期貨交易知識認知表」。",
-      "sources": [
-        "stock"
-      ],
-      "items": [
-        {
-          "name": "統一期貨",
-          "desc": "關係企業，期貨與選擇權",
-          "url": "https://www.pfcf.com.tw/"
-        },
-        {
-          "name": "期貨交易知識認知表",
-          "desc": "新開戶交易人必填"
-        }
-      ],
-      "scene": "海岬上的燈塔，燈光掃過海面，塔身刻著時間刻度。",
-      "url": "https://www.pfcf.com.tw/"
-    },
-    {
       "id": "warrant",
-      "no": "07",
+      "no": "08",
       "category": "P",
       "hex": [
         1,
@@ -502,53 +549,37 @@
       "url": "https://warrant.pscnet.com.tw/j/"
     },
     {
-      "id": "bond",
-      "no": "08",
+      "id": "futures",
+      "no": "09",
       "category": "P",
       "hex": [
         1,
-        1
+        -2
       ],
-      "model": "river",
-      "name": "債券河",
-      "tagline": "穩定流動的固定收益",
-      "body": "債券業務包含台幣債券、外幣債券、附條件交易與結構型商品，每日發布債市晨報，並公告債券承銷資訊。",
+      "model": "lighthouse",
+      "name": "期貨燈塔",
+      "tagline": "看向更遠的價格",
+      "body": "期貨與選擇權由關係企業統一期貨提供服務。期貨具高槓桿特性，自 2022 年 4 月 11 日起，新開戶交易人須填寫「期貨交易知識認知表」。",
       "sources": [
         "stock"
       ],
       "items": [
         {
-          "name": "台幣債券",
-          "desc": "新台幣計價債券",
-          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38ccd126870000001487c43695c111ac"
+          "name": "統一期貨",
+          "desc": "關係企業，期貨與選擇權",
+          "url": "https://www.pfcf.com.tw/"
         },
         {
-          "name": "外幣債券",
-          "desc": "外幣計價債券",
-          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38ccd102b1000000d39bbd65cc40a087"
-        },
-        {
-          "name": "附條件交易",
-          "desc": "約定期間與利率的債券交易",
-          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38ccd0d836000000f871040930e61b67"
-        },
-        {
-          "name": "結構型商品",
-          "desc": "結構較複雜，注意風險",
-          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38cccd8e4300000016775a2f9ad1c414"
-        },
-        {
-          "name": "債券承銷",
-          "desc": "承銷公告",
-          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38cd482961000000e611b4eb31134cfa"
+          "name": "期貨交易知識認知表",
+          "desc": "新開戶交易人必填"
         }
       ],
-      "scene": "一條緩流的河，河上有平底船載著卷軸，河岸設有水閘門。",
-      "url": "https://www.pscnet.com.tw/pscnetBond/index.do"
+      "scene": "海岬上的燈塔，燈光掃過海面，塔身刻著時間刻度。",
+      "url": "https://www.pfcf.com.tw/"
     },
     {
       "id": "global",
-      "no": "09",
+      "no": "10",
       "category": "P",
       "hex": [
         0,
@@ -592,8 +623,53 @@
       "url": "https://www.pscnet.com.tw/pscnetForeign/index.do"
     },
     {
+      "id": "bond",
+      "no": "11",
+      "category": "P",
+      "hex": [
+        1,
+        1
+      ],
+      "model": "river",
+      "name": "債券河",
+      "tagline": "穩定流動的固定收益",
+      "body": "債券業務包含台幣債券、外幣債券、附條件交易與結構型商品，每日發布債市晨報，並公告債券承銷資訊。",
+      "sources": [
+        "stock"
+      ],
+      "items": [
+        {
+          "name": "台幣債券",
+          "desc": "新台幣計價債券",
+          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38ccd126870000001487c43695c111ac"
+        },
+        {
+          "name": "外幣債券",
+          "desc": "外幣計價債券",
+          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38ccd102b1000000d39bbd65cc40a087"
+        },
+        {
+          "name": "附條件交易",
+          "desc": "約定期間與利率的債券交易",
+          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38ccd0d836000000f871040930e61b67"
+        },
+        {
+          "name": "結構型商品",
+          "desc": "結構較複雜，注意風險",
+          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38cccd8e4300000016775a2f9ad1c414"
+        },
+        {
+          "name": "債券承銷",
+          "desc": "承銷公告",
+          "url": "https://www.pscnet.com.tw/pscnetBond/menuMain.do?main_id=38cd482961000000e611b4eb31134cfa"
+        }
+      ],
+      "scene": "一條緩流的河，河上有平底船載著卷軸，河岸設有水閘門。",
+      "url": "https://www.pscnet.com.tw/pscnetBond/index.do"
+    },
+    {
       "id": "funds",
-      "no": "10",
+      "no": "12",
       "category": "P",
       "hex": [
         2,
@@ -690,7 +766,7 @@
     },
     {
       "id": "wealth",
-      "no": "11",
+      "no": "13",
       "category": "W",
       "hex": [
         1,
@@ -765,7 +841,7 @@
     },
     {
       "id": "insurance",
-      "no": "12",
+      "no": "14",
       "category": "W",
       "hex": [
         2,
@@ -787,82 +863,6 @@
       ],
       "scene": "一間有大雨傘造型屋頂的小屋，雨滴落在傘外。",
       "url": "https://insurance.pscnet.com.tw/ia/"
-    },
-    {
-      "id": "lab",
-      "no": "13",
-      "category": "S",
-      "hex": [
-        2,
-        -1
-      ],
-      "model": "tower",
-      "name": "研究塔",
-      "tagline": "投顧的瞭望台",
-      "body": "關係企業統一投顧提供投資早報、新聞評析、總經與 Fed 資訊、訪談與專題報告。基金與 ETF 的發行管理，在隔壁的基金果園（統一投信）。",
-      "sources": [
-        "stock",
-        "history"
-      ],
-      "items": [
-        {
-          "name": "統一投顧",
-          "desc": "投顧首頁與服務項目",
-          "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/index.do"
-        },
-        {
-          "name": "投資早報",
-          "desc": "每日盤前資訊",
-          "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=39a45d4c1c000000e1923552a1b93e0b"
-        },
-        {
-          "name": "Fed 資訊",
-          "desc": "總經與聯準會動態",
-          "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=4c8e7697c5000000a9a7a7c34938c36a"
-        },
-        {
-          "name": "專題報告",
-          "desc": "產業與主題研究",
-          "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/menuMain.do?main_id=39a55141fe000000b2b9ecbfbf4c803c"
-        }
-      ],
-      "scene": "高塔頂端有望遠鏡與天線，塔內書架堆滿報告，窗邊有研究員在看圖表。",
-      "url": "https://www.pscnet.com.tw/pscnetInvestmentAdvisor/index.do"
-    },
-    {
-      "id": "registry",
-      "no": "14",
-      "category": "S",
-      "hex": [
-        0,
-        -2
-      ],
-      "model": "postoffice",
-      "name": "股務代理所",
-      "tagline": "幫上市櫃公司照顧股東",
-      "body": "股務代理部門替上市、上櫃、興櫃及未上市櫃公司處理股東事務，包括股票過戶、質權異動、掛失、印鑑變更、股利領取，以及股東會與除權息資訊。",
-      "sources": [
-        "stock"
-      ],
-      "items": [
-        {
-          "name": "股票過戶",
-          "desc": "過戶與質權異動",
-          "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuMain.do?main_id=38ccec1ab60000000162609d4e3f9caa"
-        },
-        {
-          "name": "股利領取",
-          "desc": "股利發放與領取",
-          "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuMain.do?main_id=38ccea0f0c0000006598da5228fe836f"
-        },
-        {
-          "name": "其他股務作業",
-          "desc": "掛失、印鑑變更等",
-          "url": "https://www.pscnet.com.tw/pscnetStockTransfer/menuMain.do?main_id=38cce9df84000000139e811d42f011de"
-        }
-      ],
-      "scene": "古典郵局造型建築，郵差把信件送往各家公司的信箱。",
-      "url": "https://www.pscnet.com.tw/pscnetStockTransfer/index.do"
     },
     {
       "id": "forest",
@@ -1100,6 +1100,10 @@
   ],
   "tour": [
     {
+      "island": "harbour",
+      "text": "出發之前，先認識這座島：它從 1988 年的一座碼頭開始。"
+    },
+    {
       "island": "counter",
       "text": "一切從開戶開始：在 e 櫃台，用手機就能完成線上開戶。"
     },
@@ -1125,7 +1129,11 @@
     },
     {
       "island": "warrant",
-      "text": "權證、ETN、期貨這些商品各有槓桿與規則，了解之後再靠近。"
+      "text": "權證、ETN 這些商品結構較複雜，有些具槓桿，了解規則之後再靠近。"
+    },
+    {
+      "island": "futures",
+      "text": "期貨具有高槓桿特性，新開戶要先填寫期貨交易知識認知表。"
     },
     {
       "island": "global",
