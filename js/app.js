@@ -100,13 +100,13 @@ function renderPanel() {
     </header>
     <p class="tagline">${esc(i.tagline)}</p>
     <p class="body">${esc(i.body)}</p>
-    ${details}
     <h3>${t.services}<span>${i.items.length}</span></h3>
     <ul class="items">${i.items.map((it) => `
       <li>${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">` : '<div>'}
         <strong>${esc(it.name)}</strong><span>${esc(it.desc)}</span>
       ${it.url ? '<i aria-hidden="true">↗</i></a>' : '</div>'}</li>`).join('')}
     </ul>
+    ${details}
     <h3>${t.connections}<span>${conns.length}</span></h3>
     <ul class="conns">${conns.map(({ other: o, e }) => `
       <li><button type="button" data-goto="${o.id}" style="--cat:${cat[o.category].color}">
